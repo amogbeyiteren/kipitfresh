@@ -1,0 +1,23 @@
+.carousel-container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+ 
+  }
+  
+  .custom-dot-list-style {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    transform: translateY(10px);
+    /* Adjust as needed */
+    width: 100%;
+  }
+  
+  .custom-dot.active {
+    background-color: #173e1f;
+  }
+  
+  .custom-dot {
+    background-color: #7ed957;
+  }
+  

@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden ;
+    
+    /* -ms-overflow-style: none; 
+    scrollbar-width: none;  */
+}
+
+/* ::-webkit-scrollbar {
+    display: none;
+} */

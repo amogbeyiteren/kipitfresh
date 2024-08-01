@@ -1,0 +1,22 @@
+/* CustomStyles.css */
+.szh-menu-container {
+  background-color: transparent; /* Set your desired background color */
+  border: none;
+}
+.szh-menu-button {
+  background-color: transparent; /* Set your desired background color */
+  border: none;
+}
+
+.szh-menu {
+  border: none; /* Remove border */
+  background-color: #fff; /* Set your desired background color */
+  padding: 10px;
+
+  border-radius: 10px;
+}
+.szh-menu__item {
+  display: flex;
+  padding: 10px;
+  border-radius: 5px;
+}
