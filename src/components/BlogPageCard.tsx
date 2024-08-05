@@ -29,9 +29,9 @@ const ArticleCard: React.FC<IArticleCardProps> = ({
     navigate('/blog/1');
   };
   return (
-    <div onClick={gotoBlog} className='w-full py-10 flex flex-col justify-center items-start gap-4'>
+    <div onClick={gotoBlog} className='w-full py-5 sm:py-10 flex flex-col justify-center items-start gap-4'>
       <img
-        className={`w-full rounded-md ${isMd ? 'h-[200px]' : 'h-[500px]'}`}
+        className={`w-full rounded-md ${isMd ? 'h-[200px]' : 'h-[350px] md:h-[500px]'}`}
         src={imageSrc}
         alt={title}
       />

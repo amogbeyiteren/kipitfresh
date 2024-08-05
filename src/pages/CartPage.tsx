@@ -10,8 +10,8 @@ import { RiCashFill } from "react-icons/ri";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { FaRegCheckCircle } from "react-icons/fa";
+import CartCard from "../components/CartCard"
 // import 'rsuite/dist/rsuite.min.css';
-
 
 const style = {
   position: "absolute" as "absolute",
@@ -29,7 +29,29 @@ const style = {
   borderRadius: 5,
 };
 
-export interface ICartPageProps {}
+const cartItemsData = [
+  {
+    imageUrl: "https://example.com/image1.jpg",
+    productName: "Organic Pineapple - Unripe",
+    description: "Full Package",
+    price: "#10,000.00",
+    quantity: '2',
+  },
+  {
+    imageUrl: "https://example.com/image2.jpg",
+    productName: "Fresh Apples - Ripe",
+    description: "Box of Fresh Apples",
+    price: "#5,000.00",
+    quantity: '1',
+  },
+  {
+    imageUrl: "https://example.com/image3.jpg",
+    productName: "Bananas - Fresh",
+    description: "Bunch of Bananas",
+    price: "#7,500.00",
+    quantity: '3',
+  },
+];
 
 export function CartPage() {
   const [currentSection, setCurrentSection] = useState<number>(1);
@@ -49,29 +71,43 @@ export function CartPage() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [cartItems, setCartItems] = useState(cartItemsData);
+
+  const handleDelete = (index: number) => {
+    setCartItems(cartItems.filter((_, i) => i !== index));
+  };
+
+
 
   return (
     <div>
       <Modal open={open} onClose={handleClose}>
         <Box sx={style}>
           <div className="w-full h-full flex flex-col justify-center items-center gap-5 px-5">
-          <FaRegCheckCircle size={80} color="#173e1f" />
-          <Title center={true} size="md" content="Order Placed Successfully"/>
-          <span className="flex flex-col justify-center items-center">
-            <span className="text-xl text-center">Thank you for your purchase!</span>
-            <span className="text-xl text-center">You can track your order status by visiting the <span className="font-bold">Order Tracking</span> page.</span>
-          </span>
-          <button className="w-full rounded-2xl py-4 bg-[#173e1f] text-white">
-            Continue
-          </button>
-
-
+            <FaRegCheckCircle size={80} color="#173e1f" />
+            <Title
+              center={true}
+              size="md"
+              content="Order Placed Successfully"
+            />
+            <span className="flex flex-col justify-center items-center">
+              <span className="text-xl text-center">
+                Thank you for your purchase!
+              </span>
+              <span className="text-xl text-center">
+                You can track your order status by visiting the{" "}
+                <a href="order-tracking" className="font-bold">Order Tracking</a> page.
+              </span>
+            </span>
+            <button className="w-full rounded-2xl py-4 bg-[#173e1f] text-white">
+              Continue
+            </button>
           </div>
         </Box>
       </Modal>
       {currentSection === 1 && (
-        <section className="w-full flex flex-col justify-start items-center px-5 py-10 ">
-          <div className="w-full py-20 px-20 flex justify-center items-start gap-4 flex-col bg-[#7ED957] text-[#173e1f] rounded-3xl">
+        <section className="w-full flex flex-col justify-start items-center px-3 sm:px-5 py-10 ">
+          <div className="w-full py-20 px-3 lg:px-20 flex justify-center items-start gap-4 flex-col bg-[#7ED957] text-[#173e1f] rounded-3xl">
             <span
               onClick={previousSection}
               className="text-black font-light w-full text-lg flex flex-row justify-start items-center gap-1 cursor-pointer"
@@ -80,47 +116,23 @@ export function CartPage() {
             </span>
             <div className="text-black font-light w-full text-lg flex flex-row justify-between items-center">
               <Title content="Shopping Cart" />
-              <span>
+              <span className="hidden md:block">
                 Sort by: <span className="font-semibold">Price</span>
               </span>
             </div>
             <div className="w-full h-0 border border-[#173e1f] my-3"></div>
-            <div className="w-full gap-y-5 flex flex-col justify-center items-center px-10 rounded-3xl bg-[#b2e89a]">
-              <div className="w-full py-5 flex flex-row justify-between items-center gap-5">
-                <div className="flex flex-row justify-center items-center gap-5">
-                  <img className="w-[150px] h-[120px] rounded-lg" />
-                  <div className="flex flex-col justify-center items-start gap-2">
-                    <span className="font-semibold text-2xl">
-                      Organic Pineapple - Unripe{" "}
-                    </span>
-                    <span className="font-light text-lg">Full Package </span>
-                  </div>
-                </div>
-                <NumInput />
-                <span className="font-semibold text-2xl">#10,000.00</span>
-                <span className="font-semibold text-2xl">
-                  <RiDeleteBinLine />
-                </span>
-              </div>
-            </div>
-            <div className="w-full gap-y-5 flex flex-col justify-center items-center px-10 rounded-3xl bg-[#b2e89a]">
-              <div className="w-full py-5 flex flex-row justify-between items-center gap-5">
-                <div className="flex flex-row justify-center items-center gap-5">
-                  <img className="w-[150px] h-[120px] rounded-lg" />
-                  <div className="flex flex-col justify-center items-start gap-2">
-                    <span className="font-semibold text-2xl">
-                      Organic Pineapple - Unripe{" "}
-                    </span>
-                    <span className="font-light text-lg">Full Package </span>
-                  </div>
-                </div>
-                <NumInput />
-                <span className="font-semibold text-2xl">#10,000.00</span>
-                <span className="font-semibold text-2xl">
-                  <RiDeleteBinLine />
-                </span>
-              </div>
-            </div>
+            {cartItems.map((item, index) => (
+              <CartCard
+                key={index}
+                imageUrl={item.imageUrl}
+                productName={item.productName}
+                description={item.description}
+                price={item.price}
+                quantity={item.quantity}
+                onDelete={() => handleDelete(index)}
+                
+              />
+            ))}
 
             <button
               onClick={nextSection}
@@ -132,8 +144,8 @@ export function CartPage() {
         </section>
       )}
       {currentSection === 2 && (
-        <section className="w-full flex flex-col justify-start items-center px-5 py-10 ">
-          <div className="w-full py-20 px-20 flex justify-center items-start gap-4 flex-col bg-white text-[#173e1f] rounded-3xl">
+        <section className="w-full flex flex-col justify-start items-center px-3 sm:px-5 py-10 ">
+          <div className=" w-full py-20 lg:px-20 flex justify-center items-start gap-4 flex-col bg-white text-[#173e1f] rounded-3xl">
             <span
               onClick={previousSection}
               className="text-black font-light w-full text-lg flex flex-row justify-start items-center gap-1 cursor-pointer"
@@ -142,8 +154,8 @@ export function CartPage() {
             </span>
             <div className="text-black font-light w-full text-lg flex flex-row justify-between items-center">
               <Title content="Shopping Cart" />
-              <span>
-                Sort by: <span className="font-semibold">Price</span>
+              <span className="flex flex-col ">
+                Sort by: <span className="text-end font-semibold">Price</span>
               </span>
             </div>
             <div className="w-full h-0 border border-[#173e1f] my-3"></div>
@@ -199,7 +211,7 @@ export function CartPage() {
             <div className="w-full h-0 border border-[#173e1f] my-3"></div>
             <div className="flex flex-col justify-center items-center w-full">
               <div className="w-full flex justify-around items-center rounded-t-3xl gap-10 bg-white">
-                <div
+                {/* <div
                   onClick={() => selectPaymentMethod("card")}
                   className={`bg-[#7ED957] flex flex-col gap-4 justify-start items-start p-8 text-3xl text-[#173e1f] w-full rounded-2xl cursor-pointer ${
                     activePaymentMethod === "card"
@@ -220,10 +232,10 @@ export function CartPage() {
                 >
                   <PiBankBold size={60} />
                   <span>Bank</span>
-                </div>
+                </div> */}
                 <div
                   onClick={() => selectPaymentMethod("cash")}
-                  className={`bg-[#7ED957] flex flex-col gap-4 justify-start items-start p-8 text-3xl text-[#173e1f] w-full rounded-2xl cursor-pointer ${
+                  className={`bg-[#7ED957] flex flex-col gap-4 justify-start items-start p-8 text-3xl text-[#173e1f] w-[300px] rounded-2xl cursor-pointer ${
                     activePaymentMethod === "cash"
                       ? "border-4 border-[#173e1f]"
                       : ""

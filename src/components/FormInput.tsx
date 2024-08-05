@@ -33,7 +33,7 @@ const FormInput: React.FC<IFormInputProps> = ({
     const IconComponent = iconComponents[iconType];
 
     return (
-        <div className={`w-[400px] h-[50px] bg-white rounded-3xl shadow-2xl flex flex-row justify-start items-center px-2 gap-2 ${className}`}>
+        <div className={`w-full md:w-[400px] h-[50px] bg-white rounded-3xl shadow-2xl flex flex-row justify-start items-center px-2 gap-2 ${className}`}>
             <i className='w-[36px] h-[36px] rounded-3xl bg-[#7ED957] flex justify-center items-center'>
                 <IconComponent size={24} color='#173e1f' />
             </i>

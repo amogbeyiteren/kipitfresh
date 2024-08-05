@@ -76,14 +76,14 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 const iconItems = [
   { text: 'Dashboard', icon: <MdDashboard size={32} />, path: 'dashboard' },
-  { text: 'Orders', icon: <MdListAlt size={32}/>, path: 'orders' },
-  { text: 'Delivery', icon: <TbTruckDelivery size={32} />, path: 'delivery' },
-  { text: 'Products', icon: <BiSolidPackage size={32} />, path: 'products' },
+  // { text: 'Orders', icon: <MdListAlt size={32}/>, path: 'orders' },
+  // { text: 'Delivery', icon: <TbTruckDelivery size={32} />, path: 'delivery' },
+  // { text: 'Products', icon: <BiSolidPackage size={32} />, path: 'products' },
   
 ];
 
 
-export default function FarmerDashboard() {
+export default function DriverDashboard() {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('md'));
   const [open, setOpen] = useState(isLargeScreen);
@@ -96,7 +96,7 @@ export default function FarmerDashboard() {
   }, [isLargeScreen]);
 
   useEffect(() => {
-    const currentPath = location.pathname.replace('/farmer-dashboard', '');
+    const currentPath = location.pathname.replace('/driver-dashboard', '');
     if (currentPath === '') {
       
       setActiveIndex(0);

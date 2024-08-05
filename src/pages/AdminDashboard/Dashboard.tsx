@@ -66,8 +66,8 @@ const Dashboard = () => {
         onDownloadClick={handleDownloadClick}
       />
 
-      <div className="w-full h-full pb-4 flex flex-row justify-center items-center gap-5 ">
-        <div className="w-2/5 h-full flex flex-col justify-start items-start gap-2">
+      <div className="w-full h-full pb-4 flex flex-col md:flex-row justify-center items-center gap-5 ">
+        <div className="w-full md:w-3/5w-2/5 h-full flex flex-col justify-start items-start gap-2">
           <div className="w-[80%] h-[40px] flex justify-center items-center border py-1 pl-4 pr-6 rounded-2xl border-[#173e1f]">
             <CiSearch size={24} color="#173e1f" />
             <input
@@ -101,7 +101,7 @@ const Dashboard = () => {
                 />
             ))}
         </div>
-        <div className="w-3/5 h-full flex flex-col justify-start items-start gap-5">
+        <div className="w-full md:w-3/5 h-full flex flex-col justify-start items-start gap-5">
         <Title content="Order ID: #1246B" size="md" />
         <div className="w-full h-[300px] border border-black">
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { CiSearch } from "react-icons/ci";
 import { FaBasketShopping } from "react-icons/fa6";
 import { CiShoppingBasket } from "react-icons/ci";
+import { CiUser } from "react-icons/ci";
 import MenuComponent from './Menu/Menu';
 import Button from './Button';
 import logo from '../assets/LOGO.svg'
@@ -38,11 +39,11 @@ const Header: React.FC = () => {
             <img className='w-[40px] aspect-auto'
             src={logo}
             />
-              KipitFresh
+             
             </a>
            
             
-            <div className='rounded-full w-full sm:w-[300px] lg:w-[420px] h-[35px] sm:h-[45px] bg-white ml-4 sm:ml-8 lg:ml-16 flex flex-row justify-start items-center p-2'>
+            <div className='rounded-full w-full sm:w-[300px] lg:w-[420px] h-[35px] sm:h-[45px] bg-white ml-4 sm:ml-8 lg:ml-36 flex flex-row justify-start items-center p-2'>
               <CiSearch color='#173e1f' className='text-[20px] sm:text-[25px] lg:text-[30px]' />
               <input
                 className='w-full pl-4 sm:pl-6 lg:pl-8 outline-none border-none text-xs sm:text-base'
@@ -50,9 +51,12 @@ const Header: React.FC = () => {
               />
             </div>
           </div>
-          <div className='flex justify-end items-center px-2 sm:px-5'>
+          <div className='flex justify-end items-center px-2 sm:px-5 gap-4'>
             <a href='/cart' className='h-[35px] w-[35px] sm:h-[40px] sm:w-[40px] lg:h-[45px] lg:w-[45px] rounded-full bg-white flex justify-center items-center'>
               <CiShoppingBasket color='#173e1f' className='text-[20px] sm:text-[25px] lg:text-[30px]' />
+            </a>
+            <a href='/profile-management' className='h-[35px] w-[35px] sm:h-[40px] sm:w-[40px] lg:h-[45px] lg:w-[45px] rounded-full bg-white flex justify-center items-center'>
+              <CiUser color='#173e1f' className='text-[20px] sm:text-[25px] lg:text-[30px]' />
             </a>
           </div>
         </header>

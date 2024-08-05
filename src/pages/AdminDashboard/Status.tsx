@@ -40,7 +40,7 @@ const Status = () => {
     console.log("Download button clicked");
   };
   return (
-    <div className="flex flex-col justify-start items-center">
+    <div className="flex flex-col justify-start items-center w-full p-1">
       
     <AdminHeader
       titleContent="Status"

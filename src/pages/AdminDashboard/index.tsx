@@ -170,7 +170,7 @@ export default function AdminDashboard() {
         </List>
       </Drawer>
       
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <Box component="main" sx={{ flexGrow: 1, p: 1, width: '100%', backgroundColor: '#F9FFF0' }}>
 
         <Outlet />
       </Box>

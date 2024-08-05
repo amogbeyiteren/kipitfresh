@@ -59,11 +59,11 @@ export function BlogPostPage() {
 
   return (
     <div>
-      <section className="w-screen flex flex-col justify-center items-center py-32 gap-8">
+      <section className="w-screen flex flex-col justify-center items-center pt-32 pb-24 gap-8">
         <Title content="Blog Title" />
       </section>
-      <section className="w-screen p-12 ">
-        <div className="w-full flex flex-row justify-between items-center">
+      <section className="w-screen p-3 sm:p-6 md:p-12">
+        <div className="w-full flex flex-col gap-2 sm:flex-row justify-between items-center">
           <div className="flex flex-row justify-start items-center text-[#173e1f] gap-4">
             <span>Author Name</span>
             <span className="flex gap-1 items-center justify-center">
@@ -94,23 +94,23 @@ export function BlogPostPage() {
             
           </div>
         </div>
-        <div className="w-full flex flex-row justify-between items-center">
-          <div className="w-[400px]">
+        <div className="w-full flex pt-2 flex-col sm:flex-row justify-between items-center">
+          <div className=" w-[300px] sm:w-[400px]">
             <Title content="5 Effective Ways: How to preserve Pineapples" />
           </div>
 
-          <span className="w-[500px]">
+          <span className="w-[300px] mt-4 sm:mt-0 sm:w-[500px]">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, reiciendis corporis corrupti quibusdam ab eligendi fuga rerum, tempora accusantium ducimus architecto explicabo quidem ipsa in reprehenderit, illo debitis perferendis dolorem.
           </span>
 
         </div>
 
         <img 
-        className="w-full h-[600px] border border-black my-8"
+        className="w-full h-[350px] md:h-[450px] border border-black my-4"
         />
       </section>
 
-      <section className="w-screen p-12 pb-16 flex flex-col items-start">
+      <section className="w-screen px-3 sm:px-6 md:px-12 pb-4 sm:pb-8 md:pb-16 flex flex-col items-start ">
       <Title content="Post Details" />
       <span className="text-lg pt-1 text-[#173e1f]">
       10-07-2024  • <span className="font-bold">Author Name</span>  
@@ -123,7 +123,7 @@ export function BlogPostPage() {
       </p>
         
       </section>
-      <section className="w-screen p-12 pb-16 flex flex-col items-start">
+      <section className="w-screen px-3 sm:px-6 md:px-12 pb-12 flex flex-col items-start">
       <Title content="Add a Review" />
       <div className="w-full flex flex-row justify-between items-center pt-5">
    <span className="text-lg pt-1 text-[#173e1f]">
@@ -164,10 +164,10 @@ export function BlogPostPage() {
       </div>
         
       </section>
-      <section className="w-screen p-12 pb-16 flex flex-col items-start">
-      <Title content="3 Comments" />
-      <div className="w-full py-4 flex flex-col justify-center items-center">
-        <div className=" border-b-[1px] border-gray-700 flex flex-row justify-between items-start py-12">
+      <section className="w-screen px-3 sm:px-6 md:px-12 pb-3 sm:pb-6 md:pb-12 flex flex-col items-start">
+      <Title content="3 Comments" size="md" />
+      <div className="w-full pb-4 flex flex-col justify-center items-center">
+        <div className=" border-b-[1px] border-gray-700 flex flex-col-reverse gap-2 sm:flex-row justify-between items-start pt-6 pb-12">
         <div className="flex flex-col justify-center items-start ">
           <span className="font-semibold text-lg pb-1">Commenter Name</span>
           <span className="font-light pb-1"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa dolore vel nobis pariatur eligendi neque nostrum blanditiis ad laborum excepturi non dolor facere alias repellendus id quisquam, aliquid officiis dolores!</span>
@@ -194,60 +194,7 @@ export function BlogPostPage() {
           </div>
 
         </div>
-        <div className=" border-b-[1px] border-gray-700 flex flex-row justify-between items-start py-12">
-        <div className="flex flex-col justify-center items-start ">
-          <span className="font-semibold text-lg pb-1">Commenter Name</span>
-          <span className="font-light pb-1"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa dolore vel nobis pariatur eligendi neque nostrum blanditiis ad laborum excepturi non dolor facere alias repellendus id quisquam, aliquid officiis dolores!</span>
-          <span className="flex flex-row gap-8 py-3">
-            <span className="text-sm text-gray-700">about 1hour ago</span>
-            <span className="flex flex-row gap-2 font-bold justify-center items-center text-sm">
-              <span>Like</span>
-              <span>Reply</span>
 
-            </span>
-          </span>
-
-        </div>
-        <div className="flex flex-row justify-between items-center">
-            <IoIosStar color="#f5bd02" />
-            <IoIosStar color="#f5bd02" />
-            <IoIosStar color="#f5bd02" />
-            <IoIosStar color="#f5bd02" />
-            <IoIosStar color="#f5bd02" />
-
-            
-
-            
-          </div>
-
-        </div>
-        <div className=" border-b-[1px] border-gray-700 flex flex-row justify-between items-start py-12">
-        <div className="flex flex-col justify-center items-start ">
-          <span className="font-semibold text-lg pb-1">Commenter Name</span>
-          <span className="font-light pb-1"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa dolore vel nobis pariatur eligendi neque nostrum blanditiis ad laborum excepturi non dolor facere alias repellendus id quisquam, aliquid officiis dolores!</span>
-          <span className="flex flex-row gap-8 py-3">
-            <span className="text-sm text-gray-700">about 1hour ago</span>
-            <span className="flex flex-row gap-2 font-bold justify-center items-center text-sm">
-              <span>Like</span>
-              <span>Reply</span>
-
-            </span>
-          </span>
-
-        </div>
-        <div className="flex flex-row justify-between items-center">
-            <IoIosStar color="#f5bd02" />
-            <IoIosStar color="#f5bd02" />
-            <IoIosStar color="#f5bd02" />
-            <IoIosStar color="#f5bd02" />
-            <IoIosStar color="#f5bd02" />
-
-            
-
-            
-          </div>
-
-        </div>
 
       </div>
       
@@ -256,8 +203,8 @@ export function BlogPostPage() {
         
       </section>
 
-      <section className="w-screen p-12 pb-36">
-        <div className="w-full flex flex-row justify-between items-center">
+      <section className="w-screen px-3 sm:px-6 md:px-12 pb-3 sm:pb-6 md:pb-12">
+        <div className="w-full flex flex-col items-start sm:flex-row justify-between sm:items-center">
           <Title content="Related Posts" size='md'/>
           <div className="flex flex-row justify-end items-center gap-2">
             
@@ -278,7 +225,7 @@ export function BlogPostPage() {
           
           </div>
         </div>
-        <div className="w-full grid grid-cols-4 gap-12 py-5">
+        <div className="w-full grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12  py-5">
           {articles.map((article, index) => (
             <ArticleCard
               key={index}

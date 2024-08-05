@@ -17,7 +17,12 @@ import partner3 from "../assets/OCN2.png";
 import partner4 from "../assets/LSETF.png";
 import partner5 from "../assets/rockefellerfoundation.png";
 import partner6 from "../assets/JICA.png";
+import dataAnalytics from "../assets/dataAnalytics.svg"
+import cleanEnergy from "../assets/cleanEnergy.svg"
+import logistics from "../assets/logistics.svg"
+import training from "../assets/training.svg"
 import PartnerCarousel from "../components/Carousel/PartnerCarousel";
+import ServiceCarousel from "../components/Carousel/ServiceCarousel";
 
 export interface IHomePageProps {}
 
@@ -58,6 +63,28 @@ const partners = [
   {
     imageUrl: partner6,
   },
+];
+const services = [
+  {
+    imageSrc: dataAnalytics,
+    title: 'Data Analytics',
+    description: 'Our advanced data analytics services provide valuable insights to optimize agricultural processes and improve yields.'
+  },
+  {
+    imageSrc: logistics,
+    title: 'Logistics',
+    description: 'We offer efficient logistics services to ensure that your produce reaches its destination fresh and on time.'
+  },
+  {
+    imageSrc: cleanEnergy,
+    title: 'Clean Energy',
+    description: 'We are at the forefront of renewable energy solutions, helping to create a sustainable future for agriculture.'
+  },
+  {
+    imageSrc: training, // Assuming you will upload the image for training farmers and use its path here
+    title: 'Training Farmers',
+    description: 'Our expert coaching programs teach farmers the best practices for storing fruits and vegetables, ensuring longer shelf life and reduced waste.'
+  }
 ];
 const dummyProducts: IProductCardProps[] = [
   {
@@ -105,24 +132,25 @@ export function HomePage() {
 
   return (
     <div>
-      <section className="w-full  flex flex-row justify-center items-center p-5 bg-[#7ED957] translate-y-[-1px]">
+      <section className="w-full  flex flex-col md:flex-row justify-center items-center p-5 bg-[#7ED957] translate-y-[-1px]">
         <img
-          className="hidden sm:block w-1/2 h-1/2 rounded-full"
+          className="md:w-1/2 md:h-1/2 rounded-full"
           src={image1}
         />
-        <div className="w-full text-[#173e1f] h-full flex flex-col justify-center items-start sm:pl-10 pt-20">
+        <div className="w-full text-[#173e1f] h-full flex flex-col justify-center items-start sm:pl-10 pt-5 md:pt-20">
           <Title content="Fruit Delivery & Storage Made Easy" />
 
-          <span className="text-2xl pt-8">Fruits & Vegetables</span>
+          <span className="text-2xl pt-5 md:pt-8">Fruits & Vegetables</span>
 
-          <div className="w-[280px] lg:w-[560px] h-[70px] rounded-3xl bg-white flex flex-row justify-between items-center pl-4 px-4  mt-16 text-[40px] shadow-2xl">
-            <PiMapPinLight />
+          <div className="w-full lg:w-[560px] lg:h-[70px] rounded-3xl bg-white flex flex-col lg:flex-row justify-between items-center pl-4 px-4 pt-4 sm:pt-0 mt-8 md:mt-16 text-[40px] shadow-2xl">
+            <span className="hidden sm:block pt-2"><PiMapPinLight /></span>
 
             <input
               className="border-none outline-none text-[#173e1f] text-xl"
               placeholder="What's your address?"
             />
-            <button className="hidden lg:flex w-[300px] h-[55px] justify-center items-center font-semibold rounded-2xl bg-[#173e1f] text-xl text-white  gap-2">
+            <button className="flex my-4 lg:my-0 w-full lg:w-[300px] h-[55px] justify-center items-center font-semibold rounded-2xl bg-[#173e1f] text-lg text-white  gap-2">
+              
               <TbLocationPin />
               Use Current Address
             </button>
@@ -138,9 +166,9 @@ export function HomePage() {
           <div className="w-full flex justify-between items-center">
             {" "}
             <Title content="Products" size="md" />
-            <a href="/products" className="text-[#173e1f] text-lg font-light">See more</a>
+            <a href="/products" className="text-[#173e1f] text-lg font-light hover:underline">See more</a>
           </div>
-          <div className="w-full pt-16 grid grid-cols-1 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-16 ">
+          <div className="w-full pt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16 ">
             {dummyProducts.map((product, index) => (
               <ProductCard key={index} product={product} />
             ))}
@@ -155,25 +183,34 @@ export function HomePage() {
         </section>
       )}
 
-      <section className="w-full flex flex-col justify-start items-center p-5 py-40 gap-20">
-        <Title content="All Your Cultivation  Needs, Solved by Us" />
-        <div className="h-full w-full flex flex-row sm:justify-center items-center gap-20">
+      <section className="w-full flex flex-col justify-start items-center p-5 py-40 gap-12 md:gap-20">
+        <span className="sm:text-center"><Title content="All Your Cultivation  Needs, Solved by Us" /></span>
+        <div className="h-full w-full flex flex-col sm:flex-row sm:justify-center items-center gap-20">
           <div
-            className="hidden sm:block w-[500px] h-[500px] bg-contain bg-no-repeat rounded-lg  bg-bottom"
+            className="w-[300px] sm:w-[500px] h-[300px] md:h-[500px] bg-contain bg-no-repeat rounded-lg  bg-bottom"
             style={{ backgroundImage: `url(${image3})` }}
           ></div>
-          <div className="w-[300px] sm:w-[600px] h-full flex flex-col justify-center items-start gap-24">
-            <span className="text-[#173e1f] text-4xl font-semibold">
+          <div className="w-[300px] sm:w-[600px] h-full flex flex-col justify-center items-start gap-8 lg:gap-24">
+            <span className="text-[#173e1f] text-2xl font-semibold">
               Reduce post-harvest loss of fruits and vegetables with our cold
               storage facility.
             </span>
 
-            <button className="w-[300px] h-[60px] flex justify-center items-center rounded-lg bg-[#173e1f] text-white font-semibold text-2xl">
+            <button className="px-2 md:w-[300px] h-[60px] flex justify-center items-center rounded-lg bg-[#173e1f] text-white font-semibold text-2xl">
               Preserve your fruits
             </button>
           </div>
         </div>
       </section>
+      <section className="w-full flex flex-col justify-start items-center px-5 py-20 text-[#173e1f]">
+          <Title content="Our Diverse Services" center={true} />
+          <span className="text-center text-xl font-light pt-5 max-w-[800px]">
+          At <span className="font-bold">kipitfresh</span>, we are committed to providing top-quality fruits and vegetables. But that's not all we do! Our diverse services include:
+          </span>
+          <div className="w-screen pt-16">
+            <ServiceCarousel services={services} />
+          </div>
+        </section>
       {user ? (
         <section className="w-full flex flex-col justify-start items-center px-5 py-20 text-[#173e1f]">
           <Title content="Our Partners" center={true} />
@@ -191,7 +228,7 @@ export function HomePage() {
             className="w-full h-[200px] bg-no-repeat bg-bottom bg-cover translate-y-[3px]"
             style={{ backgroundImage: `url(${image5})` }}
           ></div>
-          <section className="w-full flex flex-col justify-center items-center p-5 bg-[#7ED957]">
+          <section id="signup" className="w-full flex flex-col justify-center items-center p-5 bg-[#7ED957]">
             <Title content="Let’s do it together" />
             <div className="flex flex-col sm:flex-row justify-around items-start gap-12 lg:gap-28">
               <div className="lg:w-[400px] h-[600px] flex flex-col justify-center items-center">
@@ -210,7 +247,7 @@ export function HomePage() {
                 </button>
               </div>
 
-              <div className="lg:w-[400px] h-[600px] flex flex-col justify-center items-center">
+              <div  className="lg:w-[400px] h-[600px] flex flex-col justify-center items-center">
                 <img
                   className="w-[250px] h-[250px] rounded-full object-contain"
                   src={driver}

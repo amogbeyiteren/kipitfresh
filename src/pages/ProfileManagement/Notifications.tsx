@@ -34,7 +34,7 @@ const selectStyles = {
 const Notifications = () => {
   return (
     <div className='flex flex-col justify-start items-center min-h-screen'>
-      <div className='mx-5 pt-6 pb-4 w-full border-b-[1px] border-[#173e1f] flex flex-row justify-between items-center'>
+      <div className='mx-1 md:mx-5 pt-6 pb-4 w-full border-b-[1px] border-[#173e1f] flex flex-row justify-between items-center'>
         <div className='flex flex-col items-start justify-center gap-5'>
           <div className='flex flex-row justify-center items-center gap-1'>
             <FiChevronLeft />
@@ -42,17 +42,17 @@ const Notifications = () => {
           </div>
           <Title content='Notifications' />
         </div>
-        <div className='flex flex-col items-end justify-between h-full'>
-          <div className='flex flex-row justify-center items-center gap-4 translate-y-[-30px]'>
+        <div className='hidden md:flex flex-col items-end justify-between h-full'>
+          {/* <div className='flex flex-row justify-center items-center gap-4 translate-y-[-30px]'>
             <div className='w-[40px] h-[40px] rounded-full bg-[#b2e89a] flex justify-center items-center'>
               <MdOutlineNotificationsActive size={24} />
             </div>
             <img className='w-[40px] h-[40px] rounded-full border border-[#173e1f]' alt='Profile' />
-          </div>
+          </div> */}
           <div>Saving Changes</div>
         </div>
       </div>
-      <div className='w-full px-5 pb-4 pt-20 grid grid-cols-2 gap-16'>
+      <div className='w-full px-1 md:px-5 pb-4 pt-20 grid grid-cols-1 md:grid-cols-2 gap-16'>
 
         
         <div className='flex flex-col justify-center items-start gap-4'>
@@ -70,7 +70,7 @@ const Notifications = () => {
 
         <div></div>
         
-        <button className='px-5 py-3 rounded-md bg-[#173e1f] text-xl text-white w-[300px]'>Update Preference</button>
+        <button className='px-5 py-3 rounded-md bg-[#173e1f] text-xl text-white w-full md:w-[300px]'>Update Preference</button>
       </div>
     </div>
   )

@@ -52,21 +52,21 @@ const Products = () => {
             onDownloadClick={handleDownloadClick}
           />
           <div className='p-5 flex flex-col justify-start items-start gap-8 w-full'>
-            <div className='w-4/5 flex flex-col items-start justify-start text-[#173e1f]'>
+            <div className='w-full sm:w-4/5 flex flex-col items-start justify-start text-[#173e1f]'>
               <span className='font-semibold'>Product Name</span>
               <input 
                 className='w-full p-2 border outline-none border-[#173e1f] bg-transparent rounded-md focus:border-[#7ED957]'
                 placeholder='Pineapple'
               />
             </div>
-            <div className='w-1/2 flex flex-col items-start justify-start text-[#173e1f]'>
+            <div className='w-full sm:w-1/2 flex flex-col items-start justify-start text-[#173e1f]'>
               <span className='font-semibold'>Category</span>
               <input 
                 className='w-full p-2 border outline-none border-[#173e1f] bg-transparent rounded-md focus:border-[#7ED957]'
                 placeholder='Fruit'
               />
             </div>
-            <div className='w-1/2 flex flex-col items-start justify-start text-[#173e1f]'>
+            <div className='w-full sm:w-1/2 flex flex-col items-start justify-start text-[#173e1f]'>
               <span className='font-semibold'>Price</span>
               <input 
                 className='w-full p-2 border outline-none border-[#173e1f] bg-transparent rounded-md focus:border-[#7ED957]'
@@ -74,8 +74,8 @@ const Products = () => {
                 type='number'
               />
             </div>
-            <div className='flex flex-row items-start justify-start w-full gap-5'>
-              <div className='w-1/2 flex flex-col items-start justify-start text-[#173e1f]'>
+            <div className='flex flex-col sm:flex-row items-start justify-start w-full gap-5'>
+              <div className='w-full sm:w-1/2 flex flex-col items-start justify-start text-[#173e1f]'>
                 <span className='font-semibold'>Quantity Available</span>
                 <input 
                   className='w-full p-2 border outline-none border-[#173e1f] bg-transparent rounded-md focus:border-[#7ED957]'
@@ -83,7 +83,7 @@ const Products = () => {
                   type='number'
                 />
               </div>
-              <div className='w-1/2 flex flex-col items-start justify-start text-[#173e1f]'>
+              <div className='w-full sm:w-1/2 flex flex-col items-start justify-start text-[#173e1f]'>
                 <span className='font-semibold'>Product Rating</span>
                 <input 
                   className='w-full p-2 border outline-none border-[#173e1f] bg-transparent rounded-md focus:border-[#7ED957]'
@@ -92,14 +92,14 @@ const Products = () => {
                 />
               </div>
             </div>
-            <div className='w-4/5 flex flex-col items-start justify-start text-[#173e1f]'>
+            <div className='w-full sm:w-4/5 flex flex-col items-start justify-start text-[#173e1f]'>
               <span className='font-semibold'>Product Description</span>
               <textarea 
                 className='w-full h-[100px] p-2 border outline-none border-[#173e1f] bg-transparent rounded-md focus:border-[#7ED957]'
                 placeholder='Short Product Description'
               />
             </div>
-            <div className='w-1/2 flex items-start justify-start text-[#173e1f] gap-5'>
+            <div className='w-full sm:w-1/2 flex items-start justify-start text-[#173e1f] gap-5'>
               <button
                 className="bg-[#173e1f] text-lg py-2 px-5 border-[#173e1f] border rounded-md  text-white hover:text-[#173e1f] hover:shadow-[inset_13rem_0_0_0] hover:shadow-white duration-[400ms,700ms] transition-[color,box-shadow]"
                 
@@ -122,8 +122,8 @@ const Products = () => {
             profileImageSrc="path_to_profile_image.jpg"
             onDownloadClick={handleDownloadClick}
           />
-          <div className='py-5 flex justify-between items-center w-full'>
-            <div className="w-1/2 h-[40px] flex justify-center items-center border py-1 pl-4 pr-6 rounded-2xl border-[#173e1f]">
+          <div className='py-5 flex flex-col gap-5 sm:flex-row justify-between items-center w-full'>
+            <div className="w-full sm:w-1/2 h-[40px] flex justify-center items-center border py-1 pl-4 pr-6 rounded-2xl border-[#173e1f]">
               <CiSearch size={24} color="#173e1f" />
               <input
                 className="w-full h-full bg-transparent border-none outline-none px-5"
@@ -132,7 +132,7 @@ const Products = () => {
               <IoOptions size={24} color="#173e1f" />
             </div>
             <button
-              className="bg-[#173e1f] text-lg py-2 px-5 border-[#173e1f] border rounded-md  text-white hover:text-[#173e1f] hover:shadow-[inset_13rem_0_0_0] hover:shadow-white duration-[400ms,700ms] transition-[color,box-shadow]"
+              className="bg-[#173e1f] w-full sm:w-max text-lg py-2 px-2 md:px-5 border-[#173e1f] border rounded-md  text-white hover:text-[#173e1f] hover:shadow-[inset_13rem_0_0_0] hover:shadow-white duration-[400ms,700ms] transition-[color,box-shadow]"
               onClick={handleAddProductClick}
             >
               Add New Product

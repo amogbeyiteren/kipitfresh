@@ -21,8 +21,8 @@ export function ForgotPasswordPage() {
   };
 
   return (
-    <div className="w-full p-5 flex flex-row justify-center items-center">
-      <div className="w-full  max-h-[600px]  h-full py-20 pb-36  flex flex-col justify-center items-center bg-[#7ED957] rounded-lg gap-16">
+    <div className="w-full min-h-screen p-5 flex flex-row justify-center items-center">
+      <div className="w-full h-full px-3 py-10 pb-16 md:py-20 md:pb-36  flex flex-col justify-center items-center bg-[#7ED957] rounded-lg gap-8 md:gap-16">
         <img
           className="w-[100px] object-contain rounded-lg"
           src={ForgotPasswordImage}
@@ -31,7 +31,7 @@ export function ForgotPasswordPage() {
         <Title content="Forgot Password" size="lg" />
 
         <div className=" flex flex-col justify-center items-center gap-4">
-        <span className="w-[500px] text-center pb-5">Don't worry, it happens to the best of us! To reset your password, simply click the link below and follow the instructions.</span>
+        <span className="w-full md:w-[500px] text-center pb-5">Don't worry, it happens to the best of us! To reset your password, simply click the link below and follow the instructions.</span>
 
           <FormInput
             iconType="mail"
@@ -41,11 +41,11 @@ export function ForgotPasswordPage() {
             value={formData.email}
             onChange={handleChange}
           />
-          <div className="w-[400px] flex flex-row justify-between items-center pt-5 gap-8">
-            <button className="w-[450px] h-[55px] bg-[#173e1f] rounded-full font-semibold text-xl text-white">
+          <div className=" w-full md:w-[400px] flex flex-col md:flex-row justify-between items-center pt-5 gap-8">
+            <button className="w-full px-4 py-3 bg-[#173e1f] rounded-full font-semibold text-xl text-white">
               Reset Password
             </button>
-            <a className="w-full flex h-full flex-row justify-end items-center cursor-pointer hover:underline">
+            <a href="login" className="w-full flex h-full flex-row justify-center md:justify-end items-center cursor-pointer hover:underline">
               Return to Login Page
             </a>
           </div>

@@ -86,20 +86,20 @@ export function BlogPage() {
 
   return (
     <div>
-      <section className="w-screen flex flex-col justify-center items-center py-32 gap-8">
+      <section className="w-screen flex flex-col justify-center items-center py-24 gap-8">
         <div className="flex flex-col">
           <Title content="The Latest with" />
           <Title content="Kipitfresh" center={true} />
         </div>
 
-        <span className="text-lg text-[#173e1f]">
+        <span className="text-lg text-[#173e1f] w-full text-center">
           If it can stay fresh & last longer. Then it is truly newsworthy
         </span>
         <button className="w-[300px] h-[70px] bg-[#173e1f] rounded-full text-white text-xl font-semibold">
           Stay Updated
         </button>
       </section>
-      <section className="w-screen p-12 ">
+      <section className="w-screen p-3 sm:p-6 md:p-12">
         <div className="w-full flex flex-row justify-between items-center">
           <div className="rounded-full w-full sm:w-[300px] lg:w-[420px] h-[35px] sm:h-[55px] bg-white flex flex-row justify-start items-center p-2 shadow-2xl">
             <CiSearch
@@ -123,7 +123,7 @@ export function BlogPage() {
             </button>
           </div>
         </div>
-        <div className="w-full grid grid-cols-2 gap-12 py-5">
+        <div className="w-full grid grid-cols-1  sm:grid-cols-2 gap-12 py-5">
           {articles.map((article, index) => (
             <ArticleCard
               key={index}
@@ -137,17 +137,17 @@ export function BlogPage() {
         </div>
       </section>
       
-      <section className="w-screen p-12 pb-36">
+      <section className="w-screen p-3 sm:p-6 md:p-12 pb-36">
         <div className="w-full flex flex-row justify-between items-center">
           <Title content="Related Stories..." size='md'/>
           <div className="flex flex-row justify-end items-center gap-2">
             
-            <button className="p-3 rounded-full bg-[#173e1f] text-white">
+            <button className=" p-1 sm:p-3 rounded-full bg-[#173e1f] text-white">
               See all posts
             </button>
           </div>
         </div>
-        <div className="w-full grid grid-cols-4 gap-12 py-5">
+        <div className="w-full grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12  py-5">
           {articles.map((article, index) => (
             <ArticleCard
               key={index}

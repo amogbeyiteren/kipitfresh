@@ -1,5 +1,5 @@
 import React from 'react'
-import AdminHeader from '../../components/AdminHeader';
+import UserHeader from '../../components/UserHeader';
 import { CiSearch } from 'react-icons/ci';
 import { IoOptions } from 'react-icons/io5';
 import EnhancedTable from '../../components/Datatable';
@@ -38,7 +38,7 @@ const AdminDeliveryPage = () => {
   return (
     <div className="flex flex-col justify-start items-center">
       
-      <AdminHeader
+      <UserHeader
         titleContent="Delivery"
         profileImageSrc="path_to_profile_image.jpg"
         onDownloadClick={handleDownloadClick}

@@ -23,17 +23,17 @@ export function ResetPasswordPage() {
   };
 
   return (
-    <div className="w-full p-5 flex flex-row justify-center items-center">
-      <div className="w-full  max-h-[600px]  h-full py-20 pb-36  flex flex-col justify-center items-center bg-[#7ED957] rounded-lg gap-8">
+    <div className="w-full min-h-screen p-5 flex flex-row justify-center items-center">
+      <div className="w-full px-2  max-h-[600px]  h-full py-20 pb-36  flex flex-col justify-center items-center bg-[#7ED957] rounded-lg gap-8">
         <img
           className="w-[100px] object-contain rounded-lg"
           src={ResetPasswordImage}
         />
 
-        <Title content="Set a New Pasword" size="lg" />
+        <Title content="Set a New Pasword" size="lg" center={true} />
 
         <div className=" flex flex-col justify-center items-center gap-4">
-        <span className="w-[500px] text-center pb-2">Set a new password to access your <span className="font-bold">KipitFresh</span> account.</span>
+        <span className="w-full sm:w-[500px] text-center pb-2">Set a new password to access your <span className="font-bold">KipitFresh</span> account.</span>
           <FormInput
             iconType="lock"
             placeholder="New Password"
@@ -50,11 +50,11 @@ export function ResetPasswordPage() {
             value={formData.password2}
             onChange={handleChange}
           />
-          <div className="w-[400px] flex flex-row justify-between items-center pt-12 gap-8">
-            <button className="w-[450px] h-[55px] bg-[#173e1f] rounded-full font-semibold text-xl text-white">
+          <div className="w-full sm:w-[400px] flex flex-col sm:flex-row justify-between items-center pt-12 gap-8">
+            <button className="w-full px-4 py-3 text-nowrap bg-[#173e1f] rounded-full font-semibold text-xl text-white">
               Change Password
             </button>
-            <a className="w-full flex h-full flex-row justify-end items-center cursor-pointer hover:underline">
+            <a href="login" className="text-nowrap w-full flex h-full flex-row justify-end items-center cursor-pointer hover:underline">
               Return to Login Page
             </a>
           </div>

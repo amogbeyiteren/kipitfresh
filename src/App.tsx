@@ -36,6 +36,8 @@ import FarmerOrderPage from "./pages/FarmerDashboard/Order.tsx";
 import FarmerDeliveryPage from "./pages/FarmerDashboard/Delivery.tsx";
 import FarmerProducts from "./pages/FarmerDashboard/Products.tsx";
 
+import DriverDashboard from "./pages/DriverDashboard/index.tsx";
+import DriverDashboardPage from "./pages/DriverDashboard/Dashboard.tsx";
 
 import ProtectedRoute from './components/ProtectedRoute';
 import { ThemeProvider } from '@mui/material/styles';
@@ -91,6 +93,13 @@ const App: React.FC = () => {
             <Route path="orders" element={<FarmerOrderPage />} />
             <Route path="delivery" element={<FarmerDeliveryPage />} />
 
+          </Route>
+        </Route>
+
+        <Route element={<ProtectedRoute roles={['customer', 'admin']} />}>
+          <Route path="driver-dashboard/" element={<DriverDashboard />}>
+            <Route path="" element={<FarmerDashboardIndex />} />
+            <Route path="dashboard" element={<DriverDashboardPage />} />
           </Route>
         </Route>
 

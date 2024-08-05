@@ -11,7 +11,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { FiChevronLeft } from 'react-icons/fi';
-import { CiUser, CiCreditCard1 } from "react-icons/ci";
+import { CiUser, CiCreditCard1, CiMenuBurger } from "react-icons/ci";
 import { GiFarmTractor } from "react-icons/gi";
 import { MdOutlineNotificationsActive } from "react-icons/md";
 import logo from "../../assets/LOGO.svg"
@@ -116,9 +116,10 @@ export default function ProfileManagement() {
     navigate(`/profile-management/${path}`);
   };
 
-  const handleDrawerClose = () => {
-    setOpen(false);
+  const toggleDrawer = () => {
+    setOpen(!open);
   };
+
 
   return (
     <Box sx={{ display: 'flex', backgroundColor: '#F9FFF0' }}>
@@ -127,11 +128,16 @@ export default function ProfileManagement() {
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           {!isLargeScreen && (
-            <IconButton onClick={handleDrawerClose}>
-              <FiChevronLeft />
+            <div className='mt-5'>
+            <IconButton onClick={toggleDrawer}>
+              {
+                open?<FiChevronLeft color='white' />:<CiMenuBurger color='white'/>
+              }
+              
             </IconButton>
+            </div>
           )}
-          <div className='w-full flex items-center justify-center'><img 
+          <div className='w-full flex items-center justify-center mt-5'><img 
         className='w-[50px]'
         src={logo}
         /></div>
@@ -172,7 +178,7 @@ export default function ProfileManagement() {
         </List>
       </Drawer>
       
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <Box component="main" sx={{ flexGrow: 1, p: 1 }}>
 
         <Outlet />
       </Box>

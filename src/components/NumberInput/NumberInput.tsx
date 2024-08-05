@@ -3,7 +3,7 @@ import { InputNumber, InputGroup, Stack } from 'rsuite';
 import './NumberInput.css'
 
 export const NumInput = () => {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState('0');
   const handleMinus = () => {
     setValue(prevValue => {
       const newValue = parseInt(prevValue, 10) - 12;

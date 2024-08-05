@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
               className="border-none outline-none w-full text-[#173e1f]"
               placeholder="Email"
             />
-            <button className="w-[140px] h-[42px] flex justify-center items-center font-semibold rounded-2xl bg-[#173e1f]">
+            <button className="w-[140px] h-[42px] flex justify-center items-center font-semibold rounded-xl bg-[#173e1f]">
               Subscribe
             </button>
           </div>
