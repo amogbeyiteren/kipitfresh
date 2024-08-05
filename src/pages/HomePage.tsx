@@ -1,12 +1,12 @@
 import * as React from "react";
 import image1 from "../assets/homepage-1.svg";
-const image2 = new URL('../assets/homepage-2.svg', import.meta.url).href;
+import image2 from "../assets/homepage-2.svg";
 import { PiMapPinLight } from "react-icons/pi";
 import { TbLocationPin } from "react-icons/tb";
 import Title from "../components/Title";
 import ProductCarousel from "../components/Carousel/ProductCarousel";
 import image3 from "../assets/homepage-3.svg";
-const image5 = new URL('../assets/homepage-5.svg', import.meta.url).href;
+import image5 from "../assets/homepage-5.svg";
 import driver from "../assets/driver.svg";
 import farmer from "../assets/farmer.svg";
 import { useState } from "react";
@@ -158,6 +158,7 @@ export function HomePage() {
         </div>
       </section>
       <div
+      id="hompage-2"
         className="w-full h-[200px] bg-no-repeat bg-cover translate-y-[-3px]"
         style={{ backgroundImage: `url(${image2})` }}
       ></div>
@@ -225,7 +226,8 @@ export function HomePage() {
       ) : (
         <>
           <div
-            className="w-full h-[200px] bg-no-repeat bg-bottom bg-cover translate-y-[3px]"
+          id="hompage-5"
+            className="w-full h-[200px] bg-no-repeat bg-bottom bg-cover translate-y-[3px] "
             style={{ backgroundImage: `url(${image5})` }}
           ></div>
           <section id="signup" className="w-full flex flex-col justify-center items-center p-5 bg-[#7ED957]">

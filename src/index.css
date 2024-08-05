@@ -12,6 +12,13 @@ body {
     scrollbar-width: none;  */
 }
 
+#hompage-2 {
+    background-image: url('./assets/homepage-2.svg');
+}
+#hompage-5 {
+    background-image: url('./assets/homepage-5.svg');
+}
+
 /* ::-webkit-scrollbar {
     display: none;
 } */
