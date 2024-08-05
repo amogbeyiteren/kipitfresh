@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { CiSearch } from "react-icons/ci";
-import { FaBasketShopping } from "react-icons/fa6";
 import { CiShoppingBasket } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
 import MenuComponent from './Menu/Menu';
@@ -10,7 +9,7 @@ import logo from '../assets/LOGO.svg'
 const Header: React.FC = () => {
   const [placeholder, setPlaceholder] = useState('Search for fruits & vegetables');
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
-  const [user, setUser] = useState(localStorage.getItem('user'));
+  const user = useState(localStorage.getItem('user'));
 
   useEffect(() => {
     const handleResize = () => {

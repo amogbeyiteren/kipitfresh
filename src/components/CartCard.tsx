@@ -21,6 +21,7 @@ const CartCard: React.FC<ICartCardProps> = ({
   quantity,
   
 }) => {
+  console.log(quantity)
   return (
     <div className="w-full gap-y-5 flex flex-col justify-center items-center px-3 sm:px-6 md:px-10 rounded-3xl bg-[#b2e89a]">
       <div className="w-full py-5 flex flex-col md:flex-row justify-between items-center gap-5">

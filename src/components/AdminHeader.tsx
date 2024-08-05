@@ -1,6 +1,5 @@
 import React from 'react';
 import { FiDownload } from 'react-icons/fi';
-import { MdOutlineNotificationsActive } from 'react-icons/md';
 import Title from './Title';
 import { CiUser } from 'react-icons/ci';
 
@@ -11,6 +10,7 @@ interface IAdminHeaderProps {
 }
 
 const AdminHeader: React.FC<IAdminHeaderProps> = ({ titleContent, profileImageSrc, onDownloadClick }) => {
+  console.log(profileImageSrc)
   return (
     <div className="mx-5 pt-4 pb-4 w-full flex flex-row justify-between items-center">
       <div className="flex flex-col items-start justify-center gap-5">

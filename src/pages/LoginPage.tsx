@@ -4,7 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { SlSocialFacebook } from "react-icons/sl";
 import LogInImage from "../assets/login.svg";
 import FormInput from "../components/FormInput";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 interface ILogInData {

@@ -1,4 +1,3 @@
-import * as React from "react";
 import Title from "../components/Title";
 import { IoIosStar } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";

@@ -16,7 +16,6 @@ const AdminDeliveryCard: React.FC<ICardProps> = ({ id, title, status, progress, 
     const handleClick = () => {
         onClick(id);
     };
-    const selectedTextColor = isSelected ? 'text-white' : 'text-[#173e1f]';
     const selectedBorderColor = isSelected ? 'border-white' : 'border-[#173e1f]';
     const selectedBgColorClass = isSelected ? 'bg-white' : 'bg-[#173e1f]';
 

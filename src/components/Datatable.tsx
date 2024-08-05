@@ -11,12 +11,9 @@ import TableRow from '@mui/material/TableRow';
 import TableSortLabel from '@mui/material/TableSortLabel';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper';
 import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
 import { MdDeleteForever as DeleteIcon } from "react-icons/md";
 import { IoFilter as FilterListIcon } from "react-icons/io5";
 import { visuallyHidden } from '@mui/utils';
@@ -167,7 +164,7 @@ export default function EnhancedTable({ data, columns, title, onRowClick }: Enha
   const [orderBy, setOrderBy] = React.useState<string>(columns[0].id);
   const [selected, setSelected] = React.useState<readonly number[]>([]);
   const [page, setPage] = React.useState(0);
-  const [dense, setDense] = React.useState(false);
+  const dense = false;
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   const handleRequestSort = (
@@ -177,11 +174,12 @@ export default function EnhancedTable({ data, columns, title, onRowClick }: Enha
     const isAsc = orderBy === property && order === 'asc';
     setOrder(isAsc ? 'desc' : 'asc');
     setOrderBy(property);
+    console.log(event)
   };
 
   const handleSelectAllClick = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
-      const newSelected = data.map((n, index) => index);
+      const newSelected = data.map((index) => index);
       setSelected(newSelected);
       return;
     }
@@ -189,6 +187,7 @@ export default function EnhancedTable({ data, columns, title, onRowClick }: Enha
   };
 
   const handleClick = (event: React.MouseEvent<unknown>, id: number) => {
+    console.log(event)
     const selectedIndex = selected.indexOf(id);
     let newSelected: readonly number[] = [];
 
@@ -209,6 +208,7 @@ export default function EnhancedTable({ data, columns, title, onRowClick }: Enha
 
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage);
+    console.log(event)
   };
 
   const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -216,9 +216,7 @@ export default function EnhancedTable({ data, columns, title, onRowClick }: Enha
     setPage(0);
   };
 
-  const handleChangeDense = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setDense(event.target.checked);
-  };
+
 
   const isSelected = (id: number) => selected.indexOf(id) !== -1;
 

@@ -1,4 +1,4 @@
-import { createAsyncThunk, AsyncThunk, AsyncThunkPayloadCreator } from "@reduxjs/toolkit";
+import { createAsyncThunk, AsyncThunk} from "@reduxjs/toolkit";
 import axios, { AxiosError } from "axios";
 
 interface LoginResponse {

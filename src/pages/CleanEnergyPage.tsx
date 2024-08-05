@@ -1,4 +1,3 @@
-import * as React from "react";
 import Title from "../components/Title";
 import cleanEnergy1 from '../assets/clean-energy-1.jpeg'
 import cleanEnergy2 from '../assets/clean-energy-2.jpeg'

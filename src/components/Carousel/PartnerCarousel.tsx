@@ -1,4 +1,3 @@
-import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import './PartnerCarousel.css'
@@ -26,27 +25,7 @@ const responsive = {
   },
 };
 
-const CustomLeftArrow = ({ onClick }: { onClick?: () => void }) => {
-  return (
-    <button
-      onClick={onClick}
-      className="custom-arrow left-arrow"
-    >
-      &#9664;
-    </button>
-  );
-};
 
-const CustomRightArrow = ({ onClick }: { onClick?: () => void }) => {
-  return (
-    <button
-      onClick={onClick}
-      className="custom-arrow right-arrow"
-    >
-      &#9654;
-    </button>
-  );
-};
 
 export default function PartnerCarousel({ partners }: ICarouselProps) {
   return (

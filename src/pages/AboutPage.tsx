@@ -1,10 +1,8 @@
-import * as React from "react";
 import Title from "../components/Title";
 import values from "../assets/about-values.svg";
 import vision from "../assets/vision.svg";
 import mission from "../assets/mission.svg";
-import arrow1 from "../assets/arrow-down-1.svg";
-import arrow2 from "../assets/arrow-down-2.svg";
+
 
 export function AboutPage() {
   return (

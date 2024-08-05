@@ -1,5 +1,4 @@
 import React from 'react';
-import { InputNumber, InputGroup, Stack } from 'rsuite';
 import './NumberInput.css'
 
 export const NumInput = () => {
@@ -7,11 +6,12 @@ export const NumInput = () => {
   const handleMinus = () => {
     setValue(prevValue => {
       const newValue = parseInt(prevValue, 10) - 12;
-      return newValue >= 0 ? newValue : 0;
+      return newValue >= 0 ? newValue.toString() : '0';
     });
   };
+
   const handlePlus = () => {
-    setValue(parseInt(value, 10) + 12);
+    setValue(prevValue => (parseInt(prevValue, 10) + 12).toString());
   };
 
   return (

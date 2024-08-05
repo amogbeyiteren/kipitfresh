@@ -1,8 +1,4 @@
 import Title from "../components/Title";
-import { useState } from "react";
-import { ProductCard, IProductCardProps } from "../components/ProductCard";
-import { FaCheck } from "react-icons/fa6";
-import { TbTruckDelivery } from "react-icons/tb";
 import OrderHistoryCard from "../components/OrderHistoryCard";
 
 

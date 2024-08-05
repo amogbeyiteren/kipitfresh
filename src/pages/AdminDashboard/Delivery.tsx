@@ -1,4 +1,3 @@
-import React from 'react'
 import AdminHeader from '../../components/AdminHeader';
 import { CiSearch } from 'react-icons/ci';
 import { IoOptions } from 'react-icons/io5';

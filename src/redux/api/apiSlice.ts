@@ -1,7 +1,6 @@
 import axios from "axios";
 import { Mutex } from "async-mutex";
 import { createApi, FetchArgs, fetchBaseQuery, BaseQueryApi } from "@reduxjs/toolkit/query/react";
-import { RootState} from "../store";
 import store from "../store";
 import { logout } from "../auth/authSlice";
 

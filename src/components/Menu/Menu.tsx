@@ -6,9 +6,9 @@ import { IoIosMenu } from "react-icons/io";
 import { AiOutlineProduct } from "react-icons/ai";
 import { CiReceipt } from "react-icons/ci";
 import { PiNewspaperThin } from "react-icons/pi";
-import { CiSettings } from "react-icons/ci";
 import { CiLogout } from "react-icons/ci";
 import { SlEnergy } from "react-icons/sl";
+import { HiOutlineInformationCircle } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
 
 const style = {
@@ -29,8 +29,10 @@ const navItems = [
   { label: "Dashboard", icon: <CiHome />, href: "/farmer-dashboard" },
   { label: "Products", icon: <AiOutlineProduct />, href: "/products" },
   { label: "Orders", icon: <CiReceipt />, href: "/order-history" },
+  { label: "About", icon: <HiOutlineInformationCircle />, href: "/about" },
   { label: "Blog", icon: <PiNewspaperThin />, href: "/blog" },
   { label: "Clean Energy", icon: <SlEnergy />, href: "/clean-energy" },
+
 ];
 
 
@@ -70,7 +72,7 @@ export default function BasicModal() {
 
           <ul className="flex h-[100%-80px] flex-col justify-center items-center flex-1 px-3 pt-16 gap-2 font-light">
             {navItems.map((item, index) => (
-              <li className="h-10 flex flex-row justify-start items-center w-full hover:cursor-pointer">
+              <li key={index} className="h-10 flex flex-row justify-start items-center w-full hover:cursor-pointer">
                 <a
                   href={item.href}
                   className="flex flex-row text-white justify-center items-center text-xl gap-3"

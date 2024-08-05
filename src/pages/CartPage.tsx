@@ -1,11 +1,7 @@
 import Title from "../components/Title";
 import { useState } from "react";
-import { RiDeleteBinLine } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
-import { NumInput } from "../components/NumberInput/NumberInput";
-import { IoCard } from "react-icons/io5";
-import { PiBankBold } from "react-icons/pi";
 import { RiCashFill } from "react-icons/ri";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";

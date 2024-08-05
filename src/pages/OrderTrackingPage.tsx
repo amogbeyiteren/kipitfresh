@@ -1,44 +1,10 @@
 import Title from "../components/Title";
-import { useState } from "react";
 import { FaCheck } from "react-icons/fa6";
 import { TbTruckDelivery } from "react-icons/tb";
 
 export interface IOrderTrackingPageProps {}
 
-const dummyProducts: IOrderTrackingPageProps[] = [
-  {
-    imageSrc: "https://via.placeholder.com/100",
-    title: "Product 1",
-    rating: 4,
-    price: "$19.99",
-    description: "Description for product 1",
-    in_stock: true,
-  },
-  {
-    imageSrc: "https://via.placeholder.com/100",
-    title: "Product 2",
-    rating: 5,
-    price: "$29.99",
-    description: "Description for product 2",
-    in_stock: false,
-  },
-  {
-    imageSrc: "https://via.placeholder.com/100",
-    title: "Product 3",
-    rating: 3,
-    price: "$9.99",
-    description: "Description for product 3",
-    in_stock: true,
-  },
-  {
-    imageSrc: "https://via.placeholder.com/100",
-    title: "Product 4",
-    rating: 2,
-    price: "$14.99",
-    description: "Description for product 4",
-    in_stock: true,
-  },
-];
+
 
 export function OrderTrackingPage() {
   return (

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import { styled, useTheme, Theme, CSSObject } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -11,14 +11,13 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { FiChevronLeft } from 'react-icons/fi';
-import { CiUser, CiCreditCard1 } from "react-icons/ci";
+
 import { BiMenuAltLeft } from "react-icons/bi";
-import { MdContentPaste, MdDashboard, MdListAlt, MdOutlineNotificationsActive } from "react-icons/md";
+import {MdDashboard, MdListAlt} from "react-icons/md";
 import logo from '../../assets/LOGO.svg'
 import { TbTruckDelivery } from 'react-icons/tb';
-import { IoIosSettings } from 'react-icons/io';
 import { BiSolidPackage } from "react-icons/bi";
-import { GrStatusGood } from "react-icons/gr"
+
 
 const drawerWidth = 240;
 

@@ -1,4 +1,3 @@
-import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import './ServiceCarousel.css'
@@ -28,27 +27,7 @@ const responsive = {
   },
 };
 
-const CustomLeftArrow = ({ onClick }: { onClick?: () => void }) => {
-  return (
-    <button
-      onClick={onClick}
-      className="custom-arrow left-arrow"
-    >
-      &#9664;
-    </button>
-  );
-};
 
-const CustomRightArrow = ({ onClick }: { onClick?: () => void }) => {
-  return (
-    <button
-      onClick={onClick}
-      className="custom-arrow right-arrow"
-    >
-      &#9654;
-    </button>
-  );
-};
 
 export default function ServiceCarousel({ services }: ICarouselProps) {
   return (
@@ -71,7 +50,7 @@ export default function ServiceCarousel({ services }: ICarouselProps) {
         
       >
         {services.map((service, index) => (
-             <div className="flex justify-center p-[20px]">
+             <div key={index} className="flex justify-center p-[20px]">
                <div className='group relative bg-[#7ED957] border border-[#7ED957] text-[#173e1f] flex flex-col justify-center items-center w-full rounded-lg py-8 px-2 hover:shadow-[inset_32rem_0_0_0] hover:shadow-white duration-[800ms,850ms] transition-[color,box-shadow]'>
               <img 
                 className='w-[280px] h-[280px] rounded-full transition-opacity duration-700 group-hover:opacity-0'

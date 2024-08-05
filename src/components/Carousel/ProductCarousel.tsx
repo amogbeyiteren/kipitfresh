@@ -27,11 +27,17 @@ const responsive = {
   },
 };
 
-const CustomDot = ({ onClick, ...rest }) => {
+const CustomDot = ({
+  onClick,
+  ...rest
+}: {
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  active?: boolean; // Add any other props you expect to receive in 'rest'
+}) => {
   const { active } = rest;
   return (
     <button
-      onClick={() => onClick?.()}
+    onClick={(event) => onClick?.(event)}
       className={`custom-dot ${active ? "active" : ""}`}
       style={{
         display: "inline-block",

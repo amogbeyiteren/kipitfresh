@@ -1,5 +1,3 @@
-//#D8E9A8 #173e1f
-import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Title from '../components/Title';

@@ -1,4 +1,3 @@
-import React from 'react'
 import { FiChevronLeft } from 'react-icons/fi';
 import Title from '../../components/Title';
 import { MdOutlineNotificationsActive } from "react-icons/md";

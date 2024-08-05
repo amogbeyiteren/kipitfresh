@@ -1,5 +1,4 @@
 import Title from "../components/Title";
-import { useState } from "react";
 import { ProductCard, IProductCardProps } from "../components/ProductCard";
 
 

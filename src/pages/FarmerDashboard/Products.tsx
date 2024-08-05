@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Title from "../../components/Title";
 import { CiSearch, CiUser } from "react-icons/ci";
 import { IoOptions } from "react-icons/io5";

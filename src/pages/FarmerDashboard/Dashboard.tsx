@@ -1,7 +1,3 @@
-import React, { useState } from "react";
-import { FiChevronLeft, FiDownload } from "react-icons/fi";
-import { MdOutlineNotificationsActive } from "react-icons/md";
-import { MdCancel } from "react-icons/md";
 import Title from "../../components/Title";
 import { CiSearch, CiUser } from "react-icons/ci";
 import { IoOptions } from "react-icons/io5";
@@ -11,59 +7,7 @@ import {
   IProductCardProps,
 } from "../../components/FarmerProductCard";
 
-const cards = [
-  {
-    id: 1,
-    title: "Order ID: #AD3467",
-    status: "Delivered",
-    progress: 100,
-    dates: ["21 Jun", "22 Jun", "23 Jun"],
-    times: ["04:00:00 AM", "01:00:00 PM", "07:00:00 AM"],
-  },
-  {
-    id: 2,
-    title: "Order ID: #AD3468",
-    status: "In Transit",
-    progress: 33,
-    dates: ["21 Jun", "22 Jun", "23 Jun"],
-    times: ["04:00:00 AM", "01:00:00 PM", "07:00:00 AM"],
-  },
-  {
-    id: 3,
-    title: "Order ID: #AD3469",
-    status: "Delivered",
-    progress: 100,
-    dates: ["21 Jun", "22 Jun", "23 Jun"],
-    times: ["04:00:00 AM", "01:00:00 PM", "07:00:00 AM"],
-  },
-];
-const dummyData1 = [
-  {
-    id: 1,
-    fruit: "Apple",
-    quantity: 10,
-    location: "A1",
-    customerName: "John Doe",
-    phoneNumber: "1234567890",
-  },
-  {
-    id: 2,
-    fruit: "Banana",
-    quantity: 20,
-    location: "B1",
-    customerName: "Jane Smith",
-    phoneNumber: "0987654321",
-  },
-  // More rows...
-];
 
-const columns1 = [
-  { id: "fruit", label: "Fruit", disablePadding: true },
-  { id: "quantity", label: "Quantity", numeric: true },
-  { id: "location", label: "Location" },
-  { id: "customerName", label: "Customer Name" },
-  { id: "phoneNumber", label: "Phone Number" },
-];
 const dummyProducts: IProductCardProps[] = [
   {
     imageSrc: "https://via.placeholder.com/100",
@@ -90,15 +34,7 @@ const dummyProducts: IProductCardProps[] = [
   },
 ];
 const Dashboard = () => {
-  const [selectedCardId, setSelectedCardId] = useState<number | null>(1); // default to 1st card
-
-  const handleCardClick = (id: number) => {
-    setSelectedCardId(id);
-  };
-  const handleDownloadClick = () => {
-    // Handle the download button click
-    console.log("Download button clicked");
-  };
+  
   return (
     <div className="flex lg:px-2 flex-col justify-start items-start min-h-screen">
       <div className="pt-4 pb-4  w-full flex flex-row justify-between items-center">

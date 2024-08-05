@@ -1,4 +1,3 @@
-import * as React from "react";
 import Title from "../components/Title";
 import contact from "../assets/contact.svg"
 import { FiMapPin } from "react-icons/fi";

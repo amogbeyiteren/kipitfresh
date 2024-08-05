@@ -13,17 +13,18 @@ interface IMySelectProps {
 
 const MySelect: React.FC<IMySelectProps> =({ defaultValue, rowID}) => {
     const [value, setValue]= useState(defaultValue)
+    console.log(rowID)
     
     const handleChange = (event: SelectChangeEvent) => {
         // Handle the status change
         const newStatus = event.target.value;
         setValue(newStatus)
-        console.log('SYTT', event.target.value)
+        console.log(event.target.value)
         // Update the state or handle the change as needed
       }
       
     
-    console.log('Valeeeeeeee', value)
+    console.log(value)
   return (
     <FormControl variant="outlined" sx={{ m: 1, minWidth: 120 }}>
       <InputLabel id="demo-simple-select-standard-label">Select Status</InputLabel>

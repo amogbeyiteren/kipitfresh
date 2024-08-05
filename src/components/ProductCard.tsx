@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { IoIosStar } from "react-icons/io";
 
 export interface IProductCardProps {
