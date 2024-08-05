@@ -146,7 +146,7 @@ export function HomePage() {
             <span className="hidden sm:block pt-2"><PiMapPinLight /></span>
 
             <input
-              className="border-none outline-none text-[#173e1f] text-xl"
+              className="border-none outline-none text-[#173e1f] text-xl w-full bg-transparent"
               placeholder="What's your address?"
             />
             <button className="flex my-4 lg:my-0 w-full lg:w-[300px] h-[55px] justify-center items-center font-semibold rounded-2xl bg-[#173e1f] text-lg text-white  gap-2">
@@ -176,15 +176,15 @@ export function HomePage() {
           </div>
         </section>
       ) : (
-        <section className="w-full flex flex-col justify-start items-center px-5 py-20 ">
+        <section className="w-full flex flex-col justify-start items-center px-5 py-10 md:py-20 ">
           <Title content="Browse Through Our Plethora of Freshness" />
-          <div className="w-screen pt-16 px-12">
+          <div className="w-screen px-6 md:px-12">
             <ProductCarousel products={products} />
           </div>
         </section>
       )}
 
-      <section className="w-full flex flex-col justify-start items-center p-5 py-40 gap-12 md:gap-20">
+      <section className="w-full flex flex-col justify-start items-center p-5 py-20 gap-12 md:gap-20">
         <span className="sm:text-center"><Title content="All Your Cultivation  Needs, Solved by Us" /></span>
         <div className="h-full w-full flex flex-col sm:flex-row sm:justify-center items-center gap-20">
           <div

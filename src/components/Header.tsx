@@ -9,7 +9,12 @@ import logo from '../assets/LOGO.svg'
 const Header: React.FC = () => {
   const [placeholder, setPlaceholder] = useState('Search for fruits & vegetables');
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
-  const user = useState(localStorage.getItem('user'));
+  const [user, setUser] = useState(localStorage.getItem('user'));
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem('user');
+    setUser(storedUser);
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {

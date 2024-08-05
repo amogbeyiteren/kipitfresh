@@ -75,7 +75,7 @@ export default function ProductCarousel({ products }: ICarouselProps) {
       {products.map((product, index) => (
         <div key={index} className="flex justify-center items-center flex-col p-1 h-[500px]">
           <img
-            className="w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] rounded-full object-cover"
+            className="w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] rounded-full object-cover"
             src={product.imageUrl}
             alt={product.name}
           />
