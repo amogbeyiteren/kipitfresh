@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
             <MdMailOutline /> info@kipitfresh.com
           </a>
         </div>
-        <div className="flex flex-col items-end justify-start gap-2 sm:h-[245px] text-white w-full">
+        <div className="flex flex-col items-end justify-start gap-2 sm:h-[245px] text-white w-full lg:mr-2">
           <span className="font-semibold text-lg pb-5 ">
             Subscribe to our Newsletter
           </span>
