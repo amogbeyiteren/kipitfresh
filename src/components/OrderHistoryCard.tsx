@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaCheck } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 interface IOrderHistoryProps {
   imageUrl: string;
@@ -20,8 +21,12 @@ const OrderHistory: React.FC<IOrderHistoryProps> = ({
   orderId,
   price,
 }) => {
+  const navigate = useNavigate();
+  const gotoOrder = () => {
+    navigate('/order-tracking');
+  };
   return (
-    <div className="w-full grid grid-cols-1 sm:grid-cols-4 px-5 py-12 bg-[#7ED957] text-[#173e1f] border-t border-white">
+    <div onClick={gotoOrder} className="w-full grid grid-cols-1 sm:grid-cols-4 px-5 py-12 bg-[#7ED957] text-[#173e1f] border-t border-white hover:cursor-pointer">
       <div className="h-full w-full flex flex-col justify-center gap-8 items-start pr-2">
         <img
           className="w-full sm:w-[250px] border h-[250px] rounded-lg"

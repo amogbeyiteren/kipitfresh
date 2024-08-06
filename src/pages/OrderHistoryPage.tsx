@@ -35,7 +35,7 @@ const orderHistoryCardsData = [
 export function OrderHistoryPage() {
   return (
     <div>
-      <section className="w-full flex flex-col justify-start items-center px-5 py-20 ">
+      <section className="w-full flex flex-col justify-start items-center px-5 md:px-20 py-20 ">
         <div className="w-full flex justify-center items-start flex-col">
           {" "}
           <Title content="Order History" size="md" />

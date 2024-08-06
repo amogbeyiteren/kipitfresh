@@ -14,20 +14,20 @@ export function ContactPage() {
                   <Title content='Get in Touch' size='md' />
                   <span>We are here for you! How can we help?</span>
                   <input 
-                  className="w-full rounded-3xl shadow-2xl h-[60px] mt-6 px-6 border-none outline-none"
+                  className="w-full rounded-3xl shadow-2xl h-[60px] mt-6 px-6 border-none outline-none hover:border hover:border-[#173e1f]"
                   placeholder="Enter your name"
                   
 
                   />
                    <input 
-                  className="w-full rounded-3xl shadow-2xl h-[60px] mt-4 px-6 border-none outline-none"
+                  className="w-full rounded-3xl shadow-2xl h-[60px] mt-4 px-6 border-none outline-none hover:border hover:border-[#173e1f]"
                   placeholder="Enter your email address"
                   type="email"
                   
 
                   />
                   <textarea 
-                  className="w-full rounded-3xl shadow-2xl h-[240px] mt-4 p-6 border-none outline-none"
+                  className="w-full rounded-3xl shadow-2xl h-[240px] mt-4 p-6 border-none outline-none hover:border hover:border-[#173e1f]"
                   placeholder="Go ahead, we are listening..."
                  
           

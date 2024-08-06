@@ -23,6 +23,7 @@ import logistics from "../assets/logistics.svg"
 import training from "../assets/training.svg"
 import PartnerCarousel from "../components/Carousel/PartnerCarousel";
 import ServiceCarousel from "../components/Carousel/ServiceCarousel";
+import { useNavigate } from "react-router-dom";
 
 export interface IHomePageProps {}
 
@@ -129,6 +130,14 @@ export function HomePage() {
     const storedUser = localStorage.getItem('user');
     setUser(storedUser);
   }, []);
+  const navigate = useNavigate();
+  const gotoContact = () => {
+    navigate('/contact');
+  };
+  const gotoSignup = () =>{
+    navigate('/onboarding');
+
+  }
 
   return (
     <div>
@@ -137,21 +146,22 @@ export function HomePage() {
           className="md:w-1/2 md:h-1/2 rounded-full"
           src={image1}
         />
-        <div className="w-full text-[#173e1f] h-full flex flex-col justify-center items-start sm:pl-10 pt-5 md:pt-20">
+        <div className="w-full text-[#173e1f] h-full flex flex-col justify-center items-start sm:pl-10 pt-5 md:pt-20 lg:pr-2">
           <Title content="Fruit Delivery & Storage Made Easy" />
 
           <span className="text-2xl pt-5 md:pt-8">Fruits & Vegetables</span>
 
-          <div className="w-full lg:w-[560px] lg:h-[70px] rounded-3xl bg-white flex flex-col lg:flex-row justify-between items-center pl-4 px-4 pt-4 sm:pt-0 mt-8 md:mt-16 text-[40px] shadow-2xl">
+          <div className="w-full lg:w-[480px] xl:w-[560px] lg:h-[70px] rounded-3xl bg-white flex flex-col lg:flex-row justify-between items-center pl-4 px-4 pt-4 sm:pt-0 mt-8 md:mt-16 text-[40px] shadow-2xl">
             <span className="hidden sm:block pt-2"><PiMapPinLight /></span>
 
             <input
-              className="border-none outline-none text-[#173e1f] text-xl w-full bg-transparent"
+              className="border-none outline-none text-[#173e1f] text-xl w-full lg:w-[250px] bg-transparent"
               placeholder="What's your address?"
             />
             <button className="flex my-4 lg:my-0 w-full lg:w-[300px] h-[55px] justify-center items-center font-semibold rounded-2xl bg-[#173e1f] text-lg text-white  gap-2">
-              
+              <span className="lg:hidden xl:block">
               <TbLocationPin />
+              </span>
               Use Current Address
             </button>
           </div>
@@ -197,7 +207,7 @@ export function HomePage() {
               storage facility.
             </span>
 
-            <button className="px-2 md:w-[300px] h-[60px] flex justify-center items-center rounded-lg bg-[#173e1f] text-white font-semibold text-2xl">
+            <button onClick={gotoContact} className="px-2 md:w-[300px] h-[60px] flex justify-center items-center rounded-lg border border-[#173e1f] bg-[#173e1f] text-white font-semibold text-2xl  hover:text-[#173e1f] hover:shadow-[inset_20rem_0_0_0] hover:shadow-white duration-[400ms,700ms] transition-[color,box-shadow]">
               Preserve your fruits
             </button>
           </div>
@@ -244,7 +254,7 @@ export function HomePage() {
                 <span className="text-lg font-semibold pb-4 text-[#173e1f]">
                   Help Cutlivate Goodness
                 </span>
-                <button className="bg-[#173e1f] w-[170px] h-[40px] text-lg font-semibold text-[#7ED957] rounded-xl">
+                <button onClick={gotoSignup} className="bg-[#173e1f] w-[170px] h-[40px] text-lg font-semibold text-[#7ED957] rounded-xl">
                   Register Here
                 </button>
               </div>
@@ -260,7 +270,7 @@ export function HomePage() {
                 <span className="text-lg font-semibold pb-4 text-[#173e1f]">
                   Help Deliver Goodness
                 </span>
-                <button className="bg-[#173e1f] w-[170px] h-[40px] text-lg font-semibold text-[#7ED957] rounded-xl">
+                <button onClick={gotoSignup} className="bg-[#173e1f] w-[170px] h-[40px] text-lg font-semibold text-[#7ED957] rounded-xl">
                   Register Here
                 </button>
               </div>
