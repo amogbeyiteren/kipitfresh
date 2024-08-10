@@ -1,7 +1,56 @@
-.carousel-container {
-    padding-top: 10px;
-    padding-bottom: 10px;
- 
-  }
+.partner-carousel-container {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #173e1f 15% 85%,
+    transparent
+  );
+
+}
+
+.slider-item{
+animation: autoRun 18s linear infinite;
+position: absolute;
+right: 100%;
+
+} 
+.partner-carousel-container:hover .slider-item{
+  cursor: pointer;
+  animation-play-state: paused;
   
+  } 
+#first{
+
+animation-delay: 0s;
+}
+#second{
+
+animation-delay: 3s;
+}
+#third{
+
+animation-delay: 6s;
+}
+#fourth{
+
+animation-delay: 9s;
+}
+#fifth{
   
+animation-delay: 12s;
+
+}
+#sixth{
+  
+animation-delay: 15s;
+
+}
+
+@keyframes autoRun{
+from{
+  right: 100%;
+}
+to{
+  right: calc(300px* -1)
+}
+}

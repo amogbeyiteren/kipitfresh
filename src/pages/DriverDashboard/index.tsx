@@ -13,7 +13,8 @@ import ListItemText from '@mui/material/ListItemText';
 import { FiChevronLeft } from 'react-icons/fi';
 import { BiMenuAltLeft } from "react-icons/bi";
 import {MdDashboard} from "react-icons/md";
-import logo from '../../assets/LOGO.svg'
+import logo from '../../assets/images/LOGO.svg'
+import { CiLogout } from 'react-icons/ci';
 
 
 const drawerWidth = 240;
@@ -72,9 +73,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 const iconItems = [
   { text: 'Dashboard', icon: <MdDashboard size={32} />, path: 'dashboard' },
-  // { text: 'Orders', icon: <MdListAlt size={32}/>, path: 'orders' },
-  // { text: 'Delivery', icon: <TbTruckDelivery size={32} />, path: 'delivery' },
-  // { text: 'Products', icon: <BiSolidPackage size={32} />, path: 'products' },
+  
   
 ];
 
@@ -92,7 +91,7 @@ export default function DriverDashboard() {
   }, [isLargeScreen]);
 
   useEffect(() => {
-    const currentPath = location.pathname.replace('/driver-dashboard', '');
+    const currentPath = location.pathname.replace('/driver-dashboard/', '');
     if (currentPath === '') {
       
       setActiveIndex(0);
@@ -101,7 +100,7 @@ export default function DriverDashboard() {
 
   const handleItemClick = (index: number, path: string) => {
     
-    navigate(`/farmer-dashboard/${path}`);
+    navigate(`/driver-dashboard/${path}`);
     setActiveIndex(index);
     console.log('index',index);
     
@@ -131,8 +130,10 @@ export default function DriverDashboard() {
             </IconButton>
           )}
         </DrawerHeader>
+        <a href='/' className='w-full flex justify-center hover:cursor-pointer'>
         <img className={open?'h-[50px]':'h-[32px] my-3'} src={logo} />
          
+        </a>
         
         
         <List>
@@ -161,6 +162,16 @@ export default function DriverDashboard() {
             </ListItem>
           ))}
         </List>
+        <div className='h-[50vh]'></div>
+        <div  className="flex flex-row justify-start items-center px-3 font-light">
+            <a href='/'
+              
+              className="flex text-[#ffffff80] hover:text-white  flex-row justify-center items-center text-xl gap-3 hover:cursor-pointer"
+            >
+              {" "}
+              <CiLogout /> Back to Home
+            </a>
+          </div>
       </Drawer>
       
       <Box component="main" sx={{ flexGrow: 1, p: 1, width: '100%', backgroundColor: '#F9FFF0' }}>

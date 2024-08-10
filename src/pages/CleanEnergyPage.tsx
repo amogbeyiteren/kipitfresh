@@ -1,7 +1,7 @@
 import Title from "../components/Title";
-import cleanEnergy1 from '../assets/clean-energy-1.jpeg'
-import cleanEnergy2 from '../assets/clean-energy-2.jpeg'
-import cleanEnergy3 from '../assets/clean-energy-3.jpeg'
+import cleanEnergy1 from '../assets/images/clean-energy-1.jpeg'
+import cleanEnergy2 from '../assets/images/clean-energy-2.jpeg'
+import cleanEnergy3 from '../assets/images/clean-energy-3.jpeg'
 
 export function CleanEnergyPage() {
   return (

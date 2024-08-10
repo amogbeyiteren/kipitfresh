@@ -16,6 +16,10 @@ import { ProductPage } from "./pages/ProductPage";
 import { OrderHistoryPage } from "./pages/OrderHistoryPage";
 import { OrderTrackingPage } from "./pages/OrderTrackingPage";
 import { CartPage } from "./pages/CartPage";
+import { ProductSinglePage } from "./pages/ProductSinglePage.tsx";
+import { TestimonialPage } from "./pages/TestimonialPage.tsx";
+import NotFoundPage from "./pages/NotFoundPage.tsx";
+import NotAuthorisedPage from "./pages/NotAuthorisedPage.tsx"
 import ProfileManagement from "./pages/ProfileManagement/index.tsx";
 import PersonalInfo from "./pages/ProfileManagement/PersonalInfo.tsx";
 import Credentials from "./pages/ProfileManagement/Credentials.tsx";
@@ -41,12 +45,14 @@ import DriverDashboardPage from "./pages/DriverDashboard/Dashboard.tsx";
 
 import ProtectedRoute from './components/ProtectedRoute';
 import { ThemeProvider } from '@mui/material/styles';
+import ScrollToTop from "./components/ScrollToTop.tsx";
 import MaterialUiTheme from "./Theme.ts";
 
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={MaterialUiTheme}>
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -56,10 +62,13 @@ const App: React.FC = () => {
           <Route path="clean-energy" element={<CleanEnergyPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="products" element={<ProductPage />} />
+          <Route path="product" element={<ProductSinglePage/>} />
           <Route path="order-history" element={<OrderHistoryPage />} />
           <Route path="order-tracking" element={<OrderTrackingPage />} />
           <Route path="cart" element={<CartPage />} />
-          <Route path="*" element={<div>404 Not Found</div>} />
+          <Route path="testimonials" element={<TestimonialPage />} />
+          
+          
         </Route>
         
         <Route element={<ProtectedRoute roles={['customer', 'admin']} />}>
@@ -98,7 +107,7 @@ const App: React.FC = () => {
 
         <Route element={<ProtectedRoute roles={['customer', 'admin']} />}>
           <Route path="driver-dashboard/" element={<DriverDashboard />}>
-            <Route path="" element={<FarmerDashboardIndex />} />
+            <Route path="" element={<DriverDashboardPage />} />
             <Route path="dashboard" element={<DriverDashboardPage />} />
           </Route>
         </Route>
@@ -108,6 +117,9 @@ const App: React.FC = () => {
         <Route path="forgotpassword" element={<ForgotPasswordPage />} />
         <Route path="resetpassword" element={<ResetPasswordPage />} />
         <Route path="onboarding" element={<OnboardingPage />} />
+        <Route path="*" element={<NotFoundPage/>} />
+        <Route path="/notAuthorised" element={<NotAuthorisedPage/>} />
+        
       </Routes>
     </Router>
     </ThemeProvider>

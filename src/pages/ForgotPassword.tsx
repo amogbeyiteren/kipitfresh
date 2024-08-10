@@ -1,6 +1,6 @@
 import * as React from "react";
 import Title from "../components/Title";
-import ForgotPasswordImage from "../assets/forgotpassword.svg";
+import ForgotPasswordImage from "../assets/images/forgotpassword.svg";
 import FormInput from "../components/FormInput";
 
 interface IForgotPasswordData {

@@ -18,8 +18,12 @@ const responsive = {
     items: 4,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 1024, min: 800 },
     items: 3,
+  },
+  largeMobile: {
+    breakpoint: { max: 800, min: 464 },
+    items: 2,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -40,11 +44,11 @@ export default function ServiceCarousel({ services }: ICarouselProps) {
         ssr={false} // means to render carousel on server-side.
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={5000}
+        autoPlaySpeed={3000}
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={500}
-        containerClass="carousel-container"
+        containerClass="service-carousel-container"
         arrows={false}
        
         

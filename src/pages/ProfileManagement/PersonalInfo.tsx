@@ -1,6 +1,7 @@
 import { FiChevronLeft } from 'react-icons/fi';
 import Title from '../../components/Title';
 import Select from 'react-select'
+import { useNavigate } from 'react-router-dom';
 
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -30,13 +31,19 @@ const selectStyles = {
 }
 
 const PersonalInfo = () => {
+  const navigate = useNavigate()
+  const gotoPrevious =()=>{
+    navigate(-1)
+  }
   return (
     <div className='flex flex-col justify-start items-center'>
       <div className='mx-1 md:mx-5 pt-6 pb-4 w-full border-b-[1px] border-[#173e1f] flex flex-row justify-between items-center'>
         <div className='flex flex-col items-start justify-center gap-5'>
-          <div className='flex flex-row justify-center items-center gap-1'>
+        <div className='flex flex-col items-start justify-center gap-5'>
+          <div onClick={gotoPrevious} className='flex flex-row justify-center items-center gap-1 hover:underline hover:cursor-pointer'>
             <FiChevronLeft />
             <span>Previous Screen</span>
+          </div>
           </div>
           <Title content='Personal Information' />
         </div>
@@ -87,6 +94,7 @@ const PersonalInfo = () => {
         <button className='px-5 py-3 rounded-md bg-[#173e1f] text-xl text-white w-full md:w-[300px]'>Update Profile</button>
       </div>
     </div>
+    
   )
 }
 

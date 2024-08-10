@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Title from '../components/Title';
-import driver from '../assets/driver.svg';
-import farmer from '../assets/farmer.svg';
-import wholesaler from '../assets/wholesaler.svg';
-import logo from '../assets/LOGO.svg'
+import driver from '../assets/images/driver.svg';
+import farmer from '../assets/images/farmer.svg';
+import wholesaler from '../assets/images/wholesaler.svg';
+import logo from '../assets/images/LOGO.svg'
 
 interface IUserType {
   id: string;

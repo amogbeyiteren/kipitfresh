@@ -1,7 +1,7 @@
 import Title from "../../components/Title";
 import { CiSearch, CiUser } from "react-icons/ci";
 import { IoOptions } from "react-icons/io5";
-import logo from "../../assets/LOGO.svg";
+import logo from "../../assets/images/LOGO.svg";
 import {
   ProductCard,
   IProductCardProps,
@@ -51,7 +51,7 @@ const Dashboard = () => {
           <div className="flex flex-row justify-center items-center gap-4">
             <a
               href="profile-management"
-              className="w-[40px] h-[40px] rounded-full bg-[#b2e89a] flex justify-center items-center"
+              className="w-[40px] h-[40px] rounded-full bg-[#b2e89a] flex justify-center items-center hover:cursor-pointer"
             >
               <CiUser size={24} />
             </a>

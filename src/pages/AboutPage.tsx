@@ -1,8 +1,8 @@
 import Title from "../components/Title";
-import values from "../assets/about-values.svg";
-import vision from "../assets/vision.svg";
-import mission from "../assets/mission.svg";
-
+import values from "../assets/images/about-values.svg";
+import vision from "../assets/images/vision.svg";
+import mission from "../assets/images/mission.svg";
+import { m } from "framer-motion";
 
 export function AboutPage() {
   return (
@@ -20,10 +20,17 @@ export function AboutPage() {
         <span className="flex flex-col justify-center items-center mb-24 md:mb-48">
           <Title content="Our Story" size="md" center={true} />
 
-          <span className="border-b-2 w-12 h-0 border border-gray-400"></span>
+          <span className="border-b-2 w-12 h-0 border border-[#173e1f] rounded-full"></span>
         </span>
         <div className="w-full flex flex-row justify-end items-center mb-64">
-          <div className="w-[90%] py-4 px-8 rounded-l-2xl flex flex-col-reverse lg:flex-row justify-start items-center lg:gap-20 bg-[#7ED957]">
+          <m.div
+            initial={{ x: "50%" }} // Start tilted left at 45 degrees, 50% size, and invisible
+            whileInView={{
+              x: 0,
+            }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            className="w-[90%] py-4 px-8 rounded-l-2xl flex flex-col-reverse lg:flex-row justify-start items-center lg:gap-20 bg-[#7ED957]"
+          >
             <div className="pt-0 pb-12 lg:py-28 flex flex-col items-start justify-center">
               <span className="pt-5">
                 <Title size="md" content="Our Values" />
@@ -42,11 +49,18 @@ export function AboutPage() {
               src={values}
               className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px] lg:translate-y-[-50%]"
             />
-          </div>
+          </m.div>
         </div>
 
         <div className="w-full flex flex-row justify-start items-center mb-64">
-          <div className="w-[90%] py-4 px-8  rounded-r-2xl flex flex-col-reverse lg:flex-row justify-end items-center lg:gap-20 bg-[#7ED957]">
+          <m.div
+            initial={{ x: "-50%" }} // Start tilted left at 45 degrees, 50% size, and invisible
+            whileInView={{
+              x: 0,
+            }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            className="w-[90%] py-4 px-8  rounded-r-2xl flex flex-col-reverse lg:flex-row justify-end items-center lg:gap-20 bg-[#7ED957]"
+          >
             <img
               src={vision}
               className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px] lg:translate-y-[-50%]"
@@ -65,11 +79,18 @@ export function AboutPage() {
                 explore…
               </p>
             </div>
-          </div>
+          </m.div>
         </div>
 
         <div className="w-full flex flex-row justify-end items-center mb-64">
-          <div className="w-[90%] py-4 px-8 rounded-l-2xl flex flex-col-reverse lg:flex-row justify-start items-center lg:gap-20 bg-[#7ED957]">
+          <m.div
+            initial={{ x: "50%" }} // Start tilted left at 45 degrees, 50% size, and invisible
+            whileInView={{
+              x: 0,
+            }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            className="w-[90%] py-4 px-8 rounded-l-2xl flex flex-col-reverse lg:flex-row justify-start items-center lg:gap-20 bg-[#7ED957]"
+          >
             <div className="pt-0 pb-12 lg:py-28 flex flex-col items-start justify-center">
               <span className="pt-5">
                 <Title size="md" content="Our Mission" />
@@ -88,7 +109,7 @@ export function AboutPage() {
               src={mission}
               className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px] lg:translate-y-[-50%]"
             />
-          </div>
+          </m.div>
         </div>
 
         <div className="w-full flex flex-row justify-end items-center py-1 ">
@@ -107,9 +128,12 @@ export function AboutPage() {
                 explore…
               </p>
             </div>
-            <button className="w-[200px] h-[60px] bg-[#173e1f] rounded-xl text-white font-semibold text-lg">
+            <a href='/contact'>
+            <button className="w-[200px] h-[60px] bg-[#173e1f] rounded-xl text-white font-semibold border border-[#173e1f] text-lg md:text-2xl  hover:text-[#173e1f] hover:shadow-[inset_200px_0_0_0] hover:shadow-white duration-[400ms,700ms] transition-[color,box-shadow]"
+            >
               Contact Us
             </button>
+            </a>
           </div>
         </div>
       </section>

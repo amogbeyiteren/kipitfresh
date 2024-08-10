@@ -14,7 +14,8 @@ import { FiChevronLeft } from 'react-icons/fi';
 import { CiUser, CiCreditCard1, CiMenuBurger } from "react-icons/ci";
 import { GiFarmTractor } from "react-icons/gi";
 import { MdOutlineNotificationsActive } from "react-icons/md";
-import logo from "../../assets/LOGO.svg"
+import logo from "../../assets/images/LOGO.svg"
+import { CiLogout } from 'react-icons/ci';
 
 const drawerWidth = 240;
 
@@ -137,10 +138,10 @@ export default function ProfileManagement() {
             </IconButton>
             </div>
           )}
-          <div className='w-full flex items-center justify-center mt-5'><img 
+          <a href='/' className='w-full hidden md:flex items-center justify-center mt-5 hover:cursor-pointer'><img 
         className='w-[50px]'
         src={logo}
-        /></div>
+        /></a>
           
         </DrawerHeader>
         
@@ -176,6 +177,15 @@ export default function ProfileManagement() {
             </ListItem>
           ))}
         </List>
+        <div  className="pt-20 flex flex-row justify-start items-center px-3 font-light">
+            <a href='/'
+              
+              className="flex text-[#ffffff80] hover:text-white flex-row justify-center items-center text-xl gap-3 hover:cursor-pointer"
+            >
+              {" "}
+              <CiLogout /> Back to Home
+            </a>
+          </div>
       </Drawer>
       
       <Box component="main" sx={{ flexGrow: 1, p: 1 }}>

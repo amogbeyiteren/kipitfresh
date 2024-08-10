@@ -2,7 +2,7 @@ import * as React from "react";
 import Title from "../components/Title";
 import { FcGoogle } from "react-icons/fc";
 import { SlSocialFacebook } from "react-icons/sl";
-import signUpImage from "../assets/signup.svg";
+import signUpImage from "../assets/images/signup.svg";
 import FormInput from "../components/FormInput";
 import { useParams } from "react-router-dom";
 

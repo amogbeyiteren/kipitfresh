@@ -1,7 +1,7 @@
 import React from 'react';
 import { FiDownload } from 'react-icons/fi';
 import Title from './Title';
-import { CiUser } from 'react-icons/ci';
+// import { CiUser } from 'react-icons/ci';
 
 interface IAdminHeaderProps {
   titleContent: string;
@@ -21,9 +21,9 @@ const AdminHeader: React.FC<IAdminHeaderProps> = ({ titleContent, profileImageSr
           <button onClick={onDownloadClick} className="flex justify-center py-1 px-2 items-center gap-1 text-white bg-[#173e1f] rounded-lg">
             Documentation <FiDownload color="#fff" />
           </button>
-          <div className="w-[40px] h-[40px] rounded-full bg-[#b2e89a] flex justify-center items-center">
+          {/* <div className="w-[40px] h-[40px] rounded-full bg-[#b2e89a] flex justify-center items-center">
             <CiUser size={24} />
-          </div>
+          </div> */}
           
         </div>
       </div>

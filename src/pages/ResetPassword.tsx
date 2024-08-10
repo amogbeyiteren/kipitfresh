@@ -1,6 +1,6 @@
 import * as React from "react";
 import Title from "../components/Title";
-import ResetPasswordImage from "../assets/resetpassword.svg";
+import ResetPasswordImage from "../assets/images/resetpassword.svg";
 import FormInput from "../components/FormInput";
 
 interface IResetPasswordData {

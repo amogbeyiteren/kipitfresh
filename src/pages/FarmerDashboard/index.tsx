@@ -11,12 +11,12 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { FiChevronLeft } from 'react-icons/fi';
-
 import { BiMenuAltLeft } from "react-icons/bi";
 import {MdDashboard, MdListAlt} from "react-icons/md";
-import logo from '../../assets/LOGO.svg'
+import logo from '../../assets/images/LOGO.svg'
 import { TbTruckDelivery } from 'react-icons/tb';
 import { BiSolidPackage } from "react-icons/bi";
+import { CiLogout } from 'react-icons/ci';
 
 
 const drawerWidth = 240;
@@ -134,8 +134,10 @@ export default function FarmerDashboard() {
             </IconButton>
           )}
         </DrawerHeader>
+        <a href='/' className='w-full flex justify-center hover:cursor-pointer'>
         <img className={open?'h-[50px]':'h-[32px] my-3'} src={logo} />
          
+        </a>
         
         
         <List>
@@ -164,6 +166,15 @@ export default function FarmerDashboard() {
             </ListItem>
           ))}
         </List>
+        <div  className="pt-20 flex flex-row justify-start items-center px-3 font-light">
+            <a href='/'
+              
+              className="flex text-[#ffffff80] hover:text-white flex-row justify-center items-center text-xl gap-3 hover:cursor-pointer"
+            >
+              {" "}
+              <CiLogout /> Back to Home
+            </a>
+          </div>
       </Drawer>
       
       <Box component="main" sx={{ flexGrow: 1, p: 1, width: '100%', backgroundColor: '#F9FFF0' }}>

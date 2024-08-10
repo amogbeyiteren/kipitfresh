@@ -18,9 +18,9 @@ const UserHeader: React.FC<IUserHeaderProps> = ({ titleContent, profileImageSrc}
       <div className="flex flex-col items-end justify-between h-full">
         <div className="flex flex-row justify-center items-center gap-4">
           
-          <div className="w-[40px] h-[40px] rounded-full bg-[#b2e89a] flex justify-center items-center">
+          <a href='profile-management' className="w-[40px] h-[40px] rounded-full bg-[#b2e89a] flex justify-center items-center hover:cursor-pointer">
             <CiUser size={24} />
-          </div>
+          </a>
           
         </div>
       </div>

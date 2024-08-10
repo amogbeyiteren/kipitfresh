@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { FaRegCheckCircle } from "react-icons/fa";
 import CartCard from "../components/CartCard"
+import { useNavigate } from "react-router-dom";
 // import 'rsuite/dist/rsuite.min.css';
 
 const style = {
@@ -50,6 +51,7 @@ const cartItemsData = [
 ];
 
 export function CartPage() {
+  const navigate = useNavigate();
   const [currentSection, setCurrentSection] = useState<number>(1);
   const [activePaymentMethod, setActivePaymentMethod] = useState<string>("");
 
@@ -58,6 +60,10 @@ export function CartPage() {
   };
 
   const previousSection = () => {
+    if(currentSection == 1){
+      navigate('/products')
+
+    }
     setCurrentSection((prev) => prev - 1);
   };
 
@@ -106,9 +112,9 @@ export function CartPage() {
           <div className="w-full py-20 px-3 lg:px-20 flex justify-center items-start gap-4 flex-col bg-[#7ED957] text-[#173e1f] rounded-3xl">
             <span
               onClick={previousSection}
-              className="text-black font-light w-full text-lg flex flex-row justify-start items-center gap-1 cursor-pointer"
+              className="text-black font-light w-full text-lg "
             >
-              <MdOutlineKeyboardArrowLeft /> Continue Shopping
+              <span className="flex flex-row justify-start  w-max items-center gap-1 cursor-pointer hover:underline"><MdOutlineKeyboardArrowLeft /> Continue Shopping</span>
             </span>
             <div className="text-black font-light w-full text-lg flex flex-row justify-between items-center">
               <Title content="Shopping Cart" />
@@ -142,11 +148,12 @@ export function CartPage() {
       {currentSection === 2 && (
         <section className="w-full flex flex-col justify-start items-center px-3 sm:px-5 py-10 ">
           <div className=" w-full py-20 lg:px-20 flex justify-center items-start gap-4 flex-col bg-white text-[#173e1f] rounded-3xl">
+            
             <span
               onClick={previousSection}
-              className="text-black font-light w-full text-lg flex flex-row justify-start items-center gap-1 cursor-pointer"
+              className="text-black font-light w-full text-lg "
             >
-              <MdOutlineKeyboardArrowLeft /> Estimated Total
+              <span className="flex flex-row justify-start  w-max items-center gap-1 cursor-pointer hover:underline"><MdOutlineKeyboardArrowLeft /> Checking Out</span>
             </span>
             <div className="text-black font-light w-full text-lg flex flex-row justify-between items-center">
               <Title content="Shopping Cart" />
@@ -195,11 +202,11 @@ export function CartPage() {
       {currentSection === 3 && (
         <section className="w-full flex flex-col justify-start items-center px-5 py-10 ">
           <div className="w-full py-20 px-20 flex justify-center items-start gap-4 flex-col bg-white text-[#173e1f] rounded-3xl">
-            <span
+          <span
               onClick={previousSection}
-              className="text-black font-light w-full text-lg flex flex-row justify-start items-center gap-1 cursor-pointer"
+              className="text-black font-light w-full text-lg "
             >
-              <MdOutlineKeyboardArrowLeft /> Estimated Total
+              <span className="flex flex-row justify-start  w-max items-center gap-1 cursor-pointer hover:underline"><MdOutlineKeyboardArrowLeft /> Estimated Total</span>
             </span>
             <div className="text-black font-light w-full text-lg flex flex-row justify-between items-center">
               <Title content="Payment Method" />

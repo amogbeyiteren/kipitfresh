@@ -6,7 +6,7 @@ import { TbBrandFacebook } from "react-icons/tb";
 import { BsTwitterX } from "react-icons/bs";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { FaInstagram } from "react-icons/fa";
-import logo from '../assets/LOGO.svg'
+import logo from '../assets/images/LOGO.svg'
 
 const Footer: React.FC = () => {
   return (
@@ -51,12 +51,12 @@ const Footer: React.FC = () => {
         </div>
         <div className="flex flex-col items-start justify-start gap-2 h-[245px] text-white w-full">
           <span className="font-semibold text-lg pb-5">Quick Links</span>
-          <a className="text-white">Home</a>
-          <a className="text-white">About</a>
-          <a className="text-white">Services</a>
-          <a className="text-white">Blogs</a>
-          <a className="text-white">Career</a>
-          <a className="text-white">Testimonial</a>
+          <a className="text-white hover:underline hover:cursor-pointer" href="/">Home</a>
+          <a className="text-white hover:underline hover:cursor-pointer" href="/about">About</a>
+          {/* <a className="text-white hover:underline hover:cursor-pointer" href="/about">Services</a> */}
+          <a className="text-white hover:underline hover:cursor-pointer" href="/blog">Blogs</a>
+          <a className="text-white hover:underline hover:cursor-pointer" href="/onboarding">Career</a>
+          <a className="text-white hover:underline hover:cursor-pointer" href="/testimonial">Testimonial</a>
         </div>
         <div className="flex flex-col items-start justify-start gap-2 sm:h-[245px] text-white w-full">
           <span className="font-semibold text-lg pb-5 ">Get in Touch</span>

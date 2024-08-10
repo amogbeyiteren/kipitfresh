@@ -1,62 +1,83 @@
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import './PartnerCarousel.css'
-
-interface IPartner {
-  imageUrl: string;
-}
-
-interface ICarouselProps {
-  partners: IPartner[];
-}
-
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 4,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 3,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-};
+import "./PartnerCarousel.css";
+import partner1 from "../../assets/images/FATEFOUNDATION.png";
+import partner2 from "../../assets/images/USADF.png";
+import partner3 from "../../assets/images/OCN2.png";
+import partner4 from "../../assets/images/LSETF.png";
+import partner5 from "../../assets/images/rockefellerfoundation.png";
+import partner6 from "../../assets/images/JICA.png";
 
 
 
-export default function PartnerCarousel({ partners }: ICarouselProps) {
+export default function PartnerCarousel() {
   return (
-    <div className="carousel-wrapper">
-      <Carousel
-        swipeable={true}
-        draggable={false}
-        showDots={false}
-        responsive={responsive}
-        ssr={false} // means to render carousel on server-side.
-        infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={5000}
-        keyBoardControl={true}
-        customTransition="all .5"
-        transitionDuration={500}
-        containerClass="carousel-container"
-        arrows={true}
-       
-        
-      >
-        {partners.map((partner, index) => (
-          <div key={index} className="flex justify-center items-center p-10 flex-col h-[300px]">
-            <img
-              className="w-full h-full object-contain"
-              src={partner.imageUrl}
-              alt={`Partner ${index + 1}`}
-            />
-          </div>
-        ))}
-      </Carousel>
+    <div className="w-full h-[150px] mb-[150px] partner-carousel-container overflow-hidden">
+      <div className="w-full min-w-[1200px] h-full -700 flex relative">
+        <div
+          id="first"
+          className="flex justify-center items-center pb-10 px-10 flex-col h-[160px] slider-item"
+        >
+          <img
+            className="w-[200px] h-[80px] aspect-auto object-contain"
+            src={partner1}
+            alt="Fate Foundation"
+          />
+        </div>
+
+        <div
+          id="second"
+          className="flex justify-center items-center pb-10 px-10 flex-col h-[160px] slider-item"
+        >
+          <img
+            className="w-[200px] h-[80px] aspect-auto object-contain"
+            src={partner2}
+            alt="USADF"
+          />
+        </div>
+
+        <div
+          id="third"
+          className="flex justify-center items-center pb-10 px-10 flex-col h-[160px] slider-item"
+        >
+          <img
+            className="w-[200px] h-[80px] aspect-auto object-contain"
+            src={partner3}
+            alt="OCN"
+          />
+        </div>
+
+        <div
+          id="fourth"
+          className="flex justify-center items-center pb-10 px-10 flex-col h-[160px] slider-item"
+        >
+          <img
+            className="w-[200px] h-[80px] aspect-auto object-contain"
+            src={partner4}
+            alt="LSETF"
+          />
+        </div>
+
+        <div
+          id="fifth"
+          className="flex justify-center items-center pb-10 px-10 flex-col h-[160px] slider-item"
+        >
+          <img
+            className="w-[200px] h-[80px] aspect-auto object-contain"
+            src={partner5}
+            alt="Rockefeller Foundation"
+          />
+        </div>
+
+        <div
+          id="sixth"
+          className="flex justify-center items-center pb-10 px-10 flex-col h-[160px] slider-item"
+        >
+          <img
+            className="w-[200px] h-[80px] aspect-auto object-contain"
+            src={partner6}
+            alt="JICA"
+          />
+        </div>
+      </div>
     </div>
   );
 }

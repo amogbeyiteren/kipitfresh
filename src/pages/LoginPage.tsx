@@ -2,7 +2,7 @@ import * as React from "react";
 import Title from "../components/Title";
 import { FcGoogle } from "react-icons/fc";
 import { SlSocialFacebook } from "react-icons/sl";
-import LogInImage from "../assets/login.svg";
+import LogInImage from "../assets/images/login.svg";
 import FormInput from "../components/FormInput";
 import { useNavigate } from "react-router-dom";
 

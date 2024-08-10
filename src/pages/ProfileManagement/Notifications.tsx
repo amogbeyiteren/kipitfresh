@@ -1,6 +1,7 @@
 import { FiChevronLeft } from 'react-icons/fi';
 import Title from '../../components/Title';
 import Select from 'react-select'
+import { useNavigate } from 'react-router-dom';
 
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -30,11 +31,15 @@ const selectStyles = {
 }
 
 const Notifications = () => {
+  const navigate = useNavigate()
+  const gotoPrevious =()=>{
+    navigate(-1)
+  }
   return (
     <div className='flex flex-col justify-start items-center min-h-screen'>
       <div className='mx-1 md:mx-5 pt-6 pb-4 w-full border-b-[1px] border-[#173e1f] flex flex-row justify-between items-center'>
         <div className='flex flex-col items-start justify-center gap-5'>
-          <div className='flex flex-row justify-center items-center gap-1'>
+        <div onClick={gotoPrevious} className='flex flex-row justify-center items-center gap-1 hover:underline hover:cursor-pointer'>
             <FiChevronLeft />
             <span>Previous Screen</span>
           </div>

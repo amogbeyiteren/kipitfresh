@@ -26,7 +26,7 @@ const style = {
   outline: "none",
 };
 const navItems = [
-  { label: "Dashboard", icon: <CiHome />, href: "/farmer-dashboard" },
+  { label: "Dashboard", icon: <CiHome />, href: "/admin-dashboard" },
   { label: "Products", icon: <AiOutlineProduct />, href: "/products" },
   { label: "Orders", icon: <CiReceipt />, href: "/order-history" },
   { label: "About", icon: <HiOutlineInformationCircle />, href: "/about" },

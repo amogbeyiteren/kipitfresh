@@ -30,7 +30,7 @@ interface IButtonProps {
     rounded = 'xl',
     font= 'medium'
   }) => {
-    const shadowClass = shadow ? 'shadow-xl' : '';
+    const shadowClass = shadow ? 'shadow-lg' : 'hover:underline';
     const sizeClass = sizeClasses[size];
     const roundedClass = roundedClasses[rounded];
     const fontClass = `font-${font}`

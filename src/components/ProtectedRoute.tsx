@@ -9,11 +9,11 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ roles }) => {
   const user = JSON.parse(localStorage.getItem('user') || 'null');
 
   if (!user) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/notAuthorised" />;
   }
 
   if (!roles.includes(user.type)) {
-    return <Navigate to="/" />;
+    return <Navigate to="/notAuthorised" />;
   }
 
   return <Outlet />;

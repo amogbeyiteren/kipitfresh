@@ -1,5 +1,5 @@
 import Title from "../components/Title";
-import contact from "../assets/contact.svg"
+import contact from "../assets/images/contact.svg"
 import { FiMapPin } from "react-icons/fi";
 import { TbPhoneCall } from "react-icons/tb";
 import { MdMailOutline } from "react-icons/md";
