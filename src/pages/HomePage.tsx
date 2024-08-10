@@ -158,9 +158,9 @@ export function HomePage() {
         
           {/* <Title content="Fruit Delivery & Storage Made Easy" /> */}
 
-          <span className="text-2xl pt-5 md:pt-8">Fruits & Vegetables</span>
+          <span className="text-2xl pt-5 ">Fruits & Vegetables</span>
 
-          <div className="w-full lg:w-[480px] xl:w-[560px] lg:h-[70px] rounded-3xl bg-white flex flex-col lg:flex-row justify-between items-center pl-4 px-4 pt-4 sm:pt-0 mt-8 md:mt-16 text-[40px] shadow-lg lg:shadow-2xl">
+          <div className="w-full lg:w-[480px] xl:w-[560px] lg:h-[70px] rounded-3xl bg-white flex flex-col lg:flex-row justify-between items-center pl-4 px-4 pt-4 sm:pt-0 mt-8 text-[40px] shadow-lg lg:shadow-2xl">
             <span className="hidden sm:block pt-2">
               <PiMapPinLight />
             </span>
