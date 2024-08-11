@@ -59,6 +59,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
       backgroundColor: '#173e1f',
       color: '#ffffff',
       boxSizing: 'border-box',
+      height: "100vh",
       ...(open ? openedMixin(theme) : closedMixin(theme)),
     },
     
@@ -177,15 +178,24 @@ export default function ProfileManagement() {
             </ListItem>
           ))}
         </List>
-        <div  className="pt-20 flex flex-row justify-start items-center px-3 font-light">
-            <a href='/'
-              
-              className="flex text-[#ffffff80] hover:text-white flex-row justify-center items-center text-xl gap-3 hover:cursor-pointer"
-            >
-              {" "}
-              <CiLogout /> Back to Home
-            </a>
-          </div>
+        <a href="/" className="absolute bottom-5">
+          <ListItem
+            sx={{
+              color: "#ffffff",
+            }}
+          >
+            <ListItemIcon sx={{ color: "#ffffff" }}>
+              <CiLogout size={32} />
+            </ListItemIcon>
+            <ListItemText
+              primary="Back to Home"
+              sx={{
+                fontSize: 36,
+                color: "#ffffff",
+              }}
+            />
+          </ListItem>
+        </a>
       </Drawer>
       
       <Box component="main" sx={{ flexGrow: 1, p: 1 }}>

@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
           {/* <a className="text-white hover:underline hover:cursor-pointer" href="/about">Services</a> */}
           <a className="text-white hover:underline hover:cursor-pointer" href="/blog">Blogs</a>
           <a className="text-white hover:underline hover:cursor-pointer" href="/onboarding">Career</a>
-          <a className="text-white hover:underline hover:cursor-pointer" href="/testimonial">Testimonial</a>
+          <a className="text-white hover:underline hover:cursor-pointer" href="/testimonials">Testimonial</a>
         </div>
         <div className="flex flex-col items-start justify-start gap-2 sm:h-[245px] text-white w-full">
           <span className="font-semibold text-lg pb-5 ">Get in Touch</span>
