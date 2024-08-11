@@ -52,7 +52,7 @@ export function ProductPage() {
             <span  className="text-[#173e1f] text-lg font-light" >Savor the Best of Nature’s Bounty</span>
             
           </div>
-          <div className="w-full pt-16 grid grid-cols-1 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-16 ">
+          <div className="w-full pt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16 ">
             {dummyProducts.map((product, index) => (
               <ProductCard key={index} product={product} />
             ))}

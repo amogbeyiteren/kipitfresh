@@ -7,7 +7,7 @@ import { m } from "framer-motion";
 export function AboutPage() {
   return (
     <div>
-      <section className="flex justify-center items-center py-24 md:py-32">
+      <section className="flex justify-center items-center py-24 md:py-32 w-screen overflow-x-hidden">
         <div className="w-[600px] flex justify-center items-center">
           <Title
             content="Delivering fresh fruits sustainably stored, ensuring the best quality from local farmers."

@@ -101,9 +101,11 @@ export function CartPage() {
                 <a href="order-tracking" className="font-bold">Order Tracking</a> page.
               </span>
             </span>
+            <a href='/products' className="w-full">
             <button className="w-full rounded-2xl py-4 bg-[#173e1f] text-white">
               Continue
             </button>
+            </a>
           </div>
         </Box>
       </Modal>
